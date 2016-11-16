@@ -1,1 +1,0 @@
-# jfdd5-vikata
