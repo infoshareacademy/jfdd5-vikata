@@ -44,3 +44,37 @@ li {
     text-align: center;
     font-size: 2em;
 }
+
+/*FORMULARZ*/
+
+#info {
+    height: 300px;
+    background-color: #ffdded;
+    font-size: 1rem;
+    text-align: center;
+    padding: 40px;
+}
+
+#info h2{
+    font-size: 3em;
+}
+
+#info h4{
+    font-size: 2em;
+}
+
+#info form{
+    margin:50px;
+}
+
+#info input[type="email"]{
+    width: 600px;
+    height: 50px;
+    font-size: 42px;
+}
+
+#info input[type="submit"]{
+    width: 160px;
+    height: 50px;
+    font-size: 32px;
+}
