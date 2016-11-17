@@ -51,12 +51,14 @@ body {
 #odn_do_formularza {
     background-color: transparent;
     width: 650px;
+    padding-top: 100px;
+    padding-left: 50px;
 }
 #odn_do_formularza a {
     text-decoration: none;
 }
 #odn_do_formularza h1 {
-    color: white;
+    color: black;
     font-family: 'Merriweather', serif;
     font-size: 34px;
     font-style: normal;
