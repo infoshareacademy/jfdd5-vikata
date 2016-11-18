@@ -37,18 +37,32 @@ body {
 
 .opiszajawka {
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-shadow: 0 2px 8px black;
+
 }
 
+.opiszajawka h1 {
+    font-size: 5em;
+    }
+
+.opiszajawka h2, .opiszajawka h3 {
+    font-size: 3em;
+    }
 
 #what-we-do {
     display:flex;
     flex-direction:column;
     justify-content:space-around;
 
+    background-color: rgba(51, 102, 153, 0.4);
     background-image: url("../images/auto.jpg");
+    background-blend-mode: multiply;
     background-position: center top;
     background-repeat: no-repeat;
     height: 900px;
+
 }
 
 
