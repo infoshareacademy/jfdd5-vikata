@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <title>Info o zespole</title>
     <style>
-       .oval-1, oval-2, oval-3, oval-4 {
-           width: 200px;
-           height: 300px;
+       .oval-1, .oval-2, .oval-3, .oval-4 {
+           display: inline-block;
+           width: 230px;
+           height: 320px;
            background-color: #ffdded;
 
            border-radius: 140px / 200px;
        }
         .oval-1 {
             background-image: url("images/foto-mlacki.jpg");
+            background-position: -31px -18px;
+            margin: auto;
         }
-       .oval-1 {
+       .oval-2 {
+           background-image: url("images/foto-daniel.jpg");
+       }
+       .oval-3 {
            background-image: url("images/foto-mlacki.jpg");
        }
-       .oval-1 {
-           background-image: url("images/foto-mlacki.jpg");
-       }
-       .oval-1 {
+       .oval-4 {
            background-image: url("images/foto-mlacki.jpg");
        }
 
-
+       .oval-1, .oval-2, .oval-3, .oval-4 h3 {
+    /*padding-top: 330px;*/
+    /* margin: auto; */
+    /*padding-left: 50px*/
+}
 
 
 
@@ -33,10 +40,21 @@
 <body>
 <div class="zespol">
 
-   <p class="oval-1">Michał Łącki</p>
-   <p class="oval-2">Rafał Miler</p>
-   <p class="oval-3">Daniel Peta</p>
-   <p class="oval-4">Alan Wołejko</p>
+   <div class="oval-1">
+       <h3>Michał Łącki</h3>
+   </div>
+   <div class="oval-2">
+       <h3>Rafał Miler</h3>
+   </div>
+    <div class="oval-3">
+        <h3>Daniel Peta</h3>
+    </div>
+   <div class="oval-4">
+       <h3>Alan Wołejko</h3>
+   </div>
+
+
+
 
 
 
