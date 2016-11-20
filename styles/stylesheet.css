@@ -172,3 +172,48 @@ body {
     height: 50px;
     font-size: 32px;
 }
+
+/*info o zespole*/
+.oval-1, .oval-2, .oval-3, .oval-4 {
+    display: block;
+    min-width: 230px;
+    min-height: 320px;
+    background-color: #ffdded;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 24%;
+    border-radius: 140px / 200px;
+    margin: 20px;
+}
+.oval-1 {
+    background: url("../images/foto-mlacki.jpg") -31px -18px;
+}
+.oval-2 {
+    background-image: url("../images/foto-rafal.jpg");
+    background-position: -17px 0px;
+    background-size: 109%;
+}
+.oval-3 {
+    background-image: url("../images/foto-daniel.jpg");
+    background-position: -46px 12px;
+}
+.oval-4 {
+    background-image: url("../images/foto-alan.jpg");
+    background-position: -24px -21px;
+    background-size: 238px;
+}
+.zespol {
+    /*background-color: chartreuse;*/
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.podOwalem h3{
+    background-color: darkgreen;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+    color: wheat;
+}
+.zespol-opis {
+    display: inline-block;
+}
+/*info o zespole - koniec*/
