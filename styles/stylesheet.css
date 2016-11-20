@@ -1,46 +1,55 @@
 body {
-
     font-size: 16px;
     font-family: 'Lato', sans-serif;
 }
 
 .nav_bar {
+    font-size: 2em;
     list-style-type: none;
-    margin: 0;
+    display: inline-block;
+    margin: 10px;
     padding: 0;
-    width: 100%;
+    padding-left: 10px;
+    width: 95vw;
     overflow: hidden;
     background-color: #f1f1f1;
     position: fixed;
-
+    box-shadow: 0px 0px 20px 10px black;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
+
+.logo {
+    float: left;
+    height: 35px;
+    }
+
 .nav_bar li {
-    display: inline;
-
-
+    float: left;
 }
 
 .nav_bar a {
     text-decoration: none;
-    display: inline-block;
-    color: #000;
+    display: block;
+    color: #757575;
     padding: 8px 16px;
-    text-decoration: none;
     text-align: center;
+    transition: 0.4s;
 }
 
-.nav_bar a:hover {
-    background-color: darkblue;
+.nav_bar li:not(:first-child) > a:hover {
+    background-color: #555;
+    border-radius: 5px;
     color: white;
 }
+
 
 .opiszajawka {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     color: white;
     text-shadow: 0 2px 8px black;
-
 }
 
 .opiszajawka h1 {
