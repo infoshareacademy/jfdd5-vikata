@@ -1,4 +1,13 @@
+/*KOLORY STRONY*/
+.color1{color:rgb(18,43,114);}
+.color2{color:rgb(111,119,139);}
+.color3{color:rgb(50,92,164);}
+.color4{color:rgb(25,59,91);}
+.color5{color:rgb(189,223,242);}
+
+
 body {
+
     font-size: 16px;
     font-family: 'Lato', sans-serif;
 }
@@ -25,9 +34,13 @@ body {
     height: 35px;
     }
 
+
 .nav_bar li {
     float: left;
 }
+
+
+
 
 .nav_bar a {
     text-decoration: none;
@@ -42,6 +55,7 @@ body {
     background-color: #555;
     border-radius: 5px;
     color: white;
+
 }
 
 
