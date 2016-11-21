@@ -219,9 +219,11 @@ body {
     /*background-color: chartreuse;*/
     padding-left: 20px;
     padding-top: 20px;
+    margin: auto;
+    width: 90%;
 }
 .podOwalem h3{
-    background-color: darkgreen;
+    background-color: rgb(111,119,139);
     padding-top: 14px;
     padding-bottom: 14px;
     text-align: center;
@@ -229,5 +231,6 @@ body {
 }
 .zespol-opis {
     display: inline-block;
+    margin: 10px;
 }
 /*info o zespole - koniec*/
