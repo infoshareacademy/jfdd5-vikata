@@ -93,7 +93,7 @@ body {
 /*Zajawka odniesienie do formularza*/
 #odn_do_formularza {
     background-color: transparent;
-    width: 650px;
+    width: 75%;
     padding-top: 100px;
     padding-left: 50px;
 }
@@ -101,7 +101,7 @@ body {
     text-decoration: none;
 }
 #odn_do_formularza h1 {
-    color: black;
+    color: white;
     font-family: 'Merriweather', serif;
     font-size: 34px;
     font-style: normal;
