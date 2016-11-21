@@ -12,35 +12,26 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.nav_bar {
-    font-size: 2em;
-    list-style-type: none;
-    display: inline-block;
-    margin: 10px;
-    padding: 0;
-    padding-left: 10px;
-    width: 95vw;
-    overflow: hidden;
+.nav {
+    margin: 0 10px 10px 0;
+    padding-top: 10px;
+    width: 100vw;
     background-color: #f1f1f1;
     position: fixed;
-    box-shadow: 0px 0px 20px 10px black;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+
 }
 
-
-.logo {
-    float: left;
-    height: 35px;
-    }
-
-
-.nav_bar li {
-    float: left;
+.nav_bar {
+    font-size: 1.5em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-right: 20px;
 }
-
-
-
 
 .nav_bar a {
     text-decoration: none;
@@ -51,7 +42,18 @@ body {
     transition: 0.4s;
 }
 
-.nav_bar li:not(:first-child) > a:hover {
+
+
+.logo img{
+    height: 35px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.nav_bar li > a:hover {
     background-color: #555;
     border-radius: 5px;
     color: white;
@@ -64,10 +66,14 @@ body {
     font-family: 'Oswald', sans-serif;
     color: white;
     text-shadow: 0 2px 8px black;
+    /*position: absolute;*/
+    left: 60px;
+    top: 100px;
 }
 
 .opiszajawka h1 {
     font-size: 5em;
+    padding-bottom: 25px;
     }
 
 .opiszajawka h2, .opiszajawka h3 {
@@ -89,21 +95,21 @@ body {
 }
 
 
-
 /*Zajawka odniesienie do formularza*/
 #odn_do_formularza {
     background-color: transparent;
-    width: 75%;
-    padding-top: 100px;
-    padding-left: 50px;
+    /*position: absolute;*/
+    text-align: center;
+    left: 230px;
+    top: 665px;
 }
 #odn_do_formularza a {
     text-decoration: none;
 }
 #odn_do_formularza h1 {
-    color: white;
+    color: wheat;
     font-family: 'Merriweather', serif;
-    font-size: 34px;
+    font-size: 4em;
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
