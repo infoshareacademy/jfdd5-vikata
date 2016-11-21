@@ -185,8 +185,9 @@ body {
     width: 160px;
     height: 60px;
     font-size: 33px;
-   font-variant: small-caps;
+    font-variant: small-caps;
     margin: 10px;
+    box-shadow: 0 12px 16px 0 rgba(25, 8, 26, 0.93), 0 17px 50px 0 rgba(49, 17, 60, 0.93);
 }
 
 /*info o zespole*/
