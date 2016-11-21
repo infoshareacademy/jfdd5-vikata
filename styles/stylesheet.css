@@ -1,3 +1,11 @@
+/*KOLORY STRONY*/
+.color1{color:rgb(18,43,114);}
+.color2{color:rgb(111,119,139);}
+.color3{color:rgb(50,92,164);}
+.color4{color:rgb(25,59,91);}
+.color5{color:rgb(189,223,242);}
+
+
 body {
 
     font-size: 16px;
@@ -58,10 +66,14 @@ body {
     font-family: 'Oswald', sans-serif;
     color: white;
     text-shadow: 0 2px 8px black;
+    position: absolute;
+    left: 60px;
+    top: 100px;
 }
 
 .opiszajawka h1 {
     font-size: 5em;
+    padding-bottom: 25px;
     }
 
 .opiszajawka h2, .opiszajawka h3 {
@@ -83,21 +95,20 @@ body {
 }
 
 
-
 /*Zajawka odniesienie do formularza*/
 #odn_do_formularza {
     background-color: transparent;
-    width: 650px;
-    padding-top: 100px;
-    padding-left: 50px;
+    position: absolute;
+    left: 230px;
+    top: 665px;
 }
 #odn_do_formularza a {
     text-decoration: none;
 }
 #odn_do_formularza h1 {
-    color: black;
+    color: wheat;
     font-family: 'Merriweather', serif;
-    font-size: 34px;
+    font-size: 4em;
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
@@ -128,7 +139,7 @@ body {
     border: black solid 1px;
     float:left;
     margin-top:60px;
-    padding: 0 30px;
+    padding: 30px;
 }
 
 .feature img{
@@ -150,11 +161,11 @@ body {
 /*FORMULARZ*/
 
 #info {
-    height: 300px;
+    height: 400px;
     background-color: rgb(50,92,164);
     font-size: 1rem;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
 }
 
 #info h2{
@@ -162,7 +173,7 @@ body {
 }
 
 #info h4{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 #info form{
@@ -171,14 +182,16 @@ body {
 
 #info input[type="email"]{
     width: 600px;
-    height: 50px;
+    height: 52px;
     font-size: 42px;
 }
 
 #info input[type="submit"]{
     width: 160px;
-    height: 50px;
-    font-size: 32px;
+    height: 60px;
+    font-size: 33px;
+   font-variant: small-caps;
+    margin: 10px;
 }
 
 /*info o zespole*/
@@ -213,9 +226,11 @@ body {
     /*background-color: chartreuse;*/
     padding-left: 20px;
     padding-top: 20px;
+    margin: auto;
+    width: 90%;
 }
 .podOwalem h3{
-    background-color: darkgreen;
+    background-color: rgb(111,119,139);
     padding-top: 14px;
     padding-bottom: 14px;
     text-align: center;
@@ -223,5 +238,6 @@ body {
 }
 .zespol-opis {
     display: inline-block;
+    margin: 10px;
 }
 /*info o zespole - koniec*/
