@@ -124,7 +124,7 @@ body {
     background-color:rgb(189,223,242); ;
     font-size: 1rem;
     text-align: center;
-    padding: 80px 60px;
+    padding: 80px 400px;
 }
 
 #features h2{
@@ -136,32 +136,37 @@ body {
 }
 
 .feature,.featureR{
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     border: black solid 1px;
     border-radius: 50%;
     margin-top:60px;
-    padding: 30px;
+    float: left;
 }
 
 .feature img{
     display: block;
-    margin:20px auto;
+    margin-left:90px;
+    margin-top: 40px;
 }
 
 .feature h3{
+    font-size: 1.5em;
+    width: 160px;
     text-align: center;
-    font-size: 2em;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 .feature p{
     text-align: justify;
     font-size: 1.5em;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .feature:hover{
-    width:600px;
+    width:680px;
     border-radius: 200px;
 }
 
@@ -171,12 +176,11 @@ body {
 
 .feature:hover>p{
     display: block;
-    width: 200px;
+    width: 400px;
     height: 100px;
     position: relative;
-    left:10px;
-    right: 10px;
-    background-color: red;
+    left:200px;
+    top: -120px;
 }
 
 /*FORMULARZ*/
