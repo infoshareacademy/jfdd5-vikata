@@ -107,13 +107,14 @@ body {
     text-decoration: none;
 }
 #odn_do_formularza h1 {
-    color: wheat;
-    font-family: 'Merriweather', serif;
+    color: white;
+    font-family: 'Oswald', sans-serif;
     font-size: 4em;
     font-style: normal;
     font-variant: normal;
-    font-weight: 600;
+    font-weight: 400;
     padding: 15px 45px;
+    text-shadow: 0 2px 8px black;
 }
 
 
