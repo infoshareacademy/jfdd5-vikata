@@ -209,7 +209,8 @@ body {
     margin: 20px;
 }
 .oval-1 {
-    background: url("../images/foto-mlacki.jpg") -31px -18px;
+    background: url("../images/foto-mlacki.jpg") 9px 9px;
+    background-size: 90%;
 }
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
@@ -219,6 +220,7 @@ body {
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
     background-position: -46px 12px;
+    background-size: 109%;
 }
 .oval-4 {
     background-image: url("../images/foto-alan.jpg");
@@ -238,6 +240,16 @@ body {
     padding-bottom: 14px;
     text-align: center;
     color: wheat;
+    font-family: 'Lato';
+    font-size: 24px;
+}
+/*temp*/
+.podOwalem {
+    background-color: aquamarine;
+}
+.mediaSpol {
+    background-color: aquamarine;
+
 }
 .zespol-opis {
     display: inline-block;
