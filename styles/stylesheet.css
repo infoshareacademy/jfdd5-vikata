@@ -206,6 +206,7 @@ body {
 /*info o zespole*/
 .oval-1, .oval-2, .oval-3, .oval-4 {
     display: block;
+    perspective: 1000px;
     min-width: 230px;
     min-height: 320px;
     background-color: #ffdded;
@@ -214,9 +215,48 @@ body {
     border-radius: 140px / 200px;
     margin: 20px;
 }
+
+/*new code for rotation*/
+
+.rotate{
+    transition: 1.2s;
+    transform-style: preserve-3d;
+    /*position: absolute;*/
+    /*width: inherit;*/
+    /*height: inherit;*/
+}
+
+.rotate:hover {
+    transform: rotateY(180deg);
+}
+
+.oval-1, .back {
+    /*width: inherit;*/
+    /*height: inherit;*/
+    /*position: absolute;*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
 .oval-1 {
     background: url("../images/foto-mlacki.jpg") -31px -18px;
+    z-index: 2;
+    transform: rotateY(0deg);
 }
+
+.back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+
+}
+
+
+
+/* End of inserted rotation section */
+
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
     background-position: -17px 0px;
