@@ -7,7 +7,6 @@
 
 
 body {
-
     font-size: 16px;
     font-family: 'Lato', sans-serif;
 }
@@ -20,7 +19,6 @@ body {
     position: fixed;
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-
 }
 
 .nav_bar {
@@ -57,7 +55,6 @@ body {
     background-color: #555;
     border-radius: 5px;
     color: white;
-
 }
 
 
@@ -134,11 +131,15 @@ body {
     font-size: 3em;
 }
 
-.feature{
-    width: 380px;
-    height: 400px;
+.FR{
+    float: right;
+}
+
+.feature,.featureR{
+    width: 200px;
+    height: 200px;
     border: black solid 1px;
-    float:left;
+    border-radius: 50%;
     margin-top:60px;
     padding: 30px;
 }
@@ -150,13 +151,32 @@ body {
 
 .feature h3{
     text-align: center;
-    font-size: 2.4em;
+    font-size: 2em;
 }
 
 .feature p{
     text-align: justify;
     font-size: 1.5em;
     margin-top: 30px;
+}
+
+.feature:hover{
+    width:600px;
+    border-radius: 200px;
+}
+
+.feature>p{
+    display: none;
+}
+
+.feature:hover>p{
+    display: block;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left:10px;
+    right: 10px;
+    background-color: red;
 }
 
 /*FORMULARZ*/
