@@ -151,22 +151,20 @@ body {
 
 .feature img{
     display: block;
-    margin-left:90px;
+    margin-left:100px;
     margin-top: 40px;
 }
 
 .feature h3{
     font-size: 1.5em;
-    width: 160px;
+    width: 220px;
     text-align: center;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 20px;
 }
 
 .feature p{
     font-size: 1.5em;
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 .feature:hover{
@@ -182,7 +180,7 @@ body {
     overflow: hidden;
     position: relative;
     left:240px;
-    top: -120px;
+    top: -80px;
     transition: width 1s;
 }
 
