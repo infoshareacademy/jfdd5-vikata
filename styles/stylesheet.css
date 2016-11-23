@@ -209,18 +209,18 @@ body {
     margin: 20px;
 }
 .oval-1 {
-    background: url("../images/foto-mlacki.jpg") 9px 9px;
+    background: url("../images/foto-mlacki.jpg") 13px 0px;
     background-size: 90%;
 }
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
-    background-position: -17px 0px;
-    background-size: 109%;
+    background-position: -22px 0px;
+    background-size: 110%;
 }
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
-    background-position: -46px 12px;
-    background-size: 109%;
+    background-position: -67px -63px;
+    background-size: 170%;
 }
 .oval-4 {
     background-image: url("../images/foto-alan.jpg");
@@ -237,7 +237,7 @@ body {
 .podOwalem h3{
     background-color: rgb(111,119,139);
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
     text-align: center;
     color: wheat;
     font-family: 'Lato',sans-serif;
@@ -245,7 +245,7 @@ body {
 }
 /*temp*/
 .podOwalem {
-    background-color: aquamarine;
+    background-color: rgb(111,119,139);
 }
 .mediaSpol {
     background-color: rgb(111,119,139);
