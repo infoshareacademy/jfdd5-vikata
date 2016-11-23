@@ -161,6 +161,7 @@ body {
     text-align: center;
     margin-left: 20px;
     margin-top: 20px;
+    float: left;
 }
 
 .feature p{
@@ -178,14 +179,13 @@ body {
     width: 0;
     height: 200px;
     overflow: hidden;
-    position: relative;
-    left:240px;
-    top: -80px;
+    float: right;
+    margin-top: -35px;
     transition: width 1s;
 }
 
 .feature-text p{
-    width: 400px;
+    width: 360px;
     height: 200px;
 }
 
