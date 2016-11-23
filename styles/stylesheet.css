@@ -206,7 +206,7 @@ body {
 
 /*info o zespole*/
 .oval-1, .oval-2, .oval-3, .oval-4 {
-    display: block;
+    display: inline-flex;
     perspective: 1000px;
     min-width: 230px;
     min-height: 320px;
@@ -214,6 +214,7 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px / 200px;
+
 
 }
 /*=======================================================================*/
@@ -292,6 +293,9 @@ body {
     margin: auto;
     width: 90%;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .podOwalem h3{
     background-color: rgb(111,119,139);
@@ -299,6 +303,7 @@ body {
     padding-bottom: 14px;
     text-align: center;
     color: wheat;
+    margin-top: 10px;
 }
 .zespol-opis {
     display: inline-block;
