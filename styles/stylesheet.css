@@ -267,6 +267,8 @@ body {
 /* End of inserted rotation section */
 /* =================================================================*/
 .oval-1 {
+    background: url("../images/foto-mlacki.jpg") 13px 0px;
+    background-size: 90%;
     background: url("../images/foto-mlacki.jpg") -31px -18px;
     z-index: 2;
     transform: rotateY(0deg);
@@ -274,12 +276,15 @@ body {
 
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
+    background-position: -22px 0px;
+    background-size: 110%;
     background-position: -17px 0;
     background-size: 109%;
 }
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
-    background-position: -46px 12px;
+    background-position: -67px -63px;
+    background-size: 170%;
 }
 .oval-4 {
     background-image: url("../images/foto-alan.jpg");
