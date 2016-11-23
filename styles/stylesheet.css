@@ -28,7 +28,8 @@ body {
     font-size: 1.5em;
     list-style-type: none;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
     flex-wrap: wrap;
     overflow: hidden;
     margin-right: 20px;
