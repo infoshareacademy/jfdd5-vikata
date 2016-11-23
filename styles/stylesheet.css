@@ -210,12 +210,12 @@ body {
     display: inline-flex;
     perspective: 1000px;
     min-width: 230px;
-    min-height: 320px;
+    min-height: 230px;
     background-color: #ffdded;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
-    border-radius: 140px / 200px;
-
+    border-radius: 140px;
+    filter: brightness(200%);
 
 }
 /*=======================================================================*/
@@ -233,30 +233,22 @@ body {
     transform: rotateY(180deg);
 }
 
-.oval-1, .back {
+.back {
+    background-color: rgb(50,92,164);
+    transform: rotateY(180deg);
+    min-width: 230px;
+    min-height: 230px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 24%;
+    border-radius: 140px;
+    position: absolute;
+    top: 0;
     /*width: inherit;*/
     /*height: inherit;*/
     /*position: absolute;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-
-}
-
-
-
-
-.back {
-    background-color: #172dff;
-    transform: rotateY(180deg);
-    min-width: 230px;
-    min-height: 320px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    width: 24%;
-    border-radius: 140px / 200px;
-    position: absolute;
-    text-align: center;
-    top: 0;
 
 
 }
@@ -265,22 +257,25 @@ body {
     margin-top: 160px;
 }
 
+.back img {
+    max-height: 50px;
+
+
+}
+
 /* End of inserted rotation section */
 /* =================================================================*/
 .oval-1 {
-    background: url("../images/foto-mlacki.jpg") 13px 0px;
-    background-size: 90%;
-    background: url("../images/foto-mlacki.jpg") -31px -18px;
-    z-index: 2;
-    transform: rotateY(0deg);
+    background-size: 50%;
+    background: url("../images/foto-mlacki.jpg") -25px -68px;
+
 }
 
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
-    background-position: -22px 0px;
-    background-size: 110%;
-    background-position: -17px 0;
+    background-position: -17px -30px;
     background-size: 109%;
+
 }
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
@@ -303,14 +298,11 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.podOwalem h3{
-    background-color: rgb(111,119,139);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    text-align: center;
-    color: wheat;
-    margin-top: 10px;
+.podOwalem{
+
 }
+
+
 .zespol-opis {
     display: inline-block;
     margin: 10px;
