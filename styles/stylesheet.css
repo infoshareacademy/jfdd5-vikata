@@ -215,14 +215,14 @@ body {
     border-radius: 140px / 200px;
     margin: 20px;
 }
-
+/*=======================================================================*/
 /*new code for rotation*/
 
 .rotate{
     transition: 1.2s;
     transform-style: preserve-3d;
-    /*position: absolute;*/
-    /*width: inherit;*/
+    position: relative;
+    width: inherit;
     /*height: inherit;*/
 }
 
@@ -237,6 +237,7 @@ body {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+
 }
 
 
@@ -244,13 +245,27 @@ body {
     background: url("../images/foto-mlacki.jpg") -31px -18px;
     z-index: 2;
     transform: rotateY(0deg);
-}
+ }
 
 .back {
-    /*background-color: #172dff;*/
+    background-color: #172dff;
     transform: rotateY(180deg);
+    min-width: 230px;
+    min-height: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 24%;
+    border-radius: 140px / 200px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+
+
 }
 
+.back p {
+    margin-top: 160px;
+
+}
 
 
 /* End of inserted rotation section */
@@ -275,6 +290,7 @@ body {
     padding-top: 20px;
     margin: auto;
     width: 90%;
+    position: relative;
 }
 .podOwalem h3{
     background-color: rgb(111,119,139);
