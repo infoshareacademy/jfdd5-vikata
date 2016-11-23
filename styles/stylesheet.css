@@ -20,6 +20,7 @@ body {
     position: fixed;
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 
 }
 
@@ -213,7 +214,7 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px / 200px;
-    margin: 20px;
+
 }
 /*=======================================================================*/
 /*new code for rotation*/
@@ -241,11 +242,7 @@ body {
 }
 
 
-.oval-1 {
-    background: url("../images/foto-mlacki.jpg") -31px -18px;
-    z-index: 2;
-    transform: rotateY(0deg);
- }
+
 
 .back {
     background-color: #172dff;
@@ -264,11 +261,15 @@ body {
 
 .back p {
     margin-top: 160px;
-
 }
 
-
 /* End of inserted rotation section */
+/* =================================================================*/
+.oval-1 {
+    background: url("../images/foto-mlacki.jpg") -31px -18px;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
 
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
