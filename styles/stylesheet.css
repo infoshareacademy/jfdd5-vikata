@@ -120,8 +120,8 @@ body {
 
 /*FICZERY*/
 #features{
-    min-height: 500px;
-    background-color:rgb(189,223,242); ;
+    height: 1500px;
+    background-color:white;
     font-size: 1rem;
     text-align: center;
     padding-top:60px;
@@ -131,25 +131,18 @@ body {
     font-size: 3em;
 }
 
-.FR{
-    float: right;
-}
-
-.box-feature{
-    width: 50%;
-    height: 300px;
-    float: left;
-}
-
 .feature{
     width: 260px;
     height: 260px;
-    border: black solid 2px;
+    /*border: black solid 2px;*/
     border-radius: 50%;
     margin-top:60px;
-    margin-left: 200px;
-    float: left;
-    background-color: rgb(214, 229, 242);
+    margin-left: 45%;
+    background-color: rgb(50,92,164);;
+}
+
+.feature:nth-of-type(2n){
+    margin-left: 35%;
 }
 
 .feature img{
