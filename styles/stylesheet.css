@@ -97,8 +97,9 @@ body {
 
 }
 
-
-/*Zajawka odniesienie do formularza*/
+/******************************/
+/*     ODNOŚNIK DO ZAPISU     */
+/******************************/
 
 
 #odn_do_formularza {
@@ -108,8 +109,6 @@ body {
 }
 #odn_do_formularza a {
     text-decoration: none;
-}
-#odn_do_formularza h1 {
     color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 4em;
@@ -119,13 +118,17 @@ body {
     padding: 15px 45px;
     text-shadow: 0 2px 8px black;
 }
+#odn_do_formularza h1 {
+
+}
 
 
 
 
 
-
-/*FICZERY*/
+/************************************/
+/*              FICZERY             */
+/************************************/
 #features{
     height: 1500px;
     font-size: 1rem;
@@ -354,3 +357,4 @@ body {
 }
 
 /*info o zespole - koniec*/
+/*356 linii*/
