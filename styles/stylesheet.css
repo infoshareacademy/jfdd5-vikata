@@ -99,12 +99,12 @@ body {
 
 
 /*Zajawka odniesienie do formularza*/
+
+
 #odn_do_formularza {
-    background-color: transparent;
-    /*position: absolute;*/
+    background-color: #fefdff;
     text-align: center;
-    left: 230px;
-    top: 665px;
+    padding: 20px 0;
 }
 #odn_do_formularza a {
     text-decoration: none;
@@ -249,7 +249,7 @@ body {
     perspective: 1000px;
     min-width: 230px;
     min-height: 230px;
-    background-color: #ffdded;
+    background-color: white;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px;
@@ -282,9 +282,6 @@ body {
     border-radius: 140px;
     position: absolute;
     top: 0;
-    /*width: inherit;*/
-    /*height: inherit;*/
-    /*position: absolute;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -292,14 +289,8 @@ body {
 
 }
 
-.back p {
-    margin-top: 160px;
-}
-
 .back img {
     max-height: 50px;
-
-
 }
 
 /* End of inserted rotation section */
@@ -338,18 +329,21 @@ body {
     flex-wrap: wrap;
 }
 .podOwalem img {
-    display: block;
-    margin: 0 auto;
+
+    margin: 70px 30px;
 }
 .podOwalem h3 {
     text-align: center;
-
+    position: relative;
+    top:50px;
+    font-size: 2em;
 }
 
 #our-team {
     background-image: url("../images/our-team-bg.jpeg");
     background-repeat: no-repeat;
     background-size: 100%;
+    padding: 100px 100px;
 
 }
 
