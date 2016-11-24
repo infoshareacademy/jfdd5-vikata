@@ -251,7 +251,7 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px;
-    filter: brightness(200%);
+    filter: brightness(100%);
     background-repeat: no-repeat;
 
 }
@@ -348,7 +348,7 @@ body {
     background-image: url("../images/our-team-bg.jpeg");
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: ;
+
 }
 
 .zespol-opis {
