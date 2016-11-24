@@ -17,15 +17,18 @@ body {
     width: 100vw;
     background-color: rgba(25,59,91, 0.9);
     position: fixed;
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
 }
 
 .nav_bar {
     font-size: 1.5em;
     list-style-type: none;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
     flex-wrap: wrap;
     overflow: hidden;
     margin-right: 20px;
@@ -76,11 +79,11 @@ body {
 .opiszajawka h1 {
     font-size: 5em;
     padding-bottom: 25px;
-    }
+}
 
 .opiszajawka h2, .opiszajawka h3 {
     font-size: 3em;
-    }
+}
 
 #what-we-do {
     display:flex;
@@ -242,26 +245,85 @@ body {
 
 /*info o zespole*/
 .oval-1, .oval-2, .oval-3, .oval-4 {
-    display: block;
+    display: inline-flex;
+    perspective: 1000px;
     min-width: 230px;
     min-height: 320px;
     background-color: #ffdded;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px / 200px;
-    margin: 20px;
+
+
 }
+/*=======================================================================*/
+/*new code for rotation*/
+
+.rotate{
+    transition: 1.2s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: inherit;
+    /*height: inherit;*/
+}
+
+.rotate:hover {
+    transform: rotateY(180deg);
+}
+
+.oval-1, .back {
+    /*width: inherit;*/
+    /*height: inherit;*/
+    /*position: absolute;*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+
+
+
+.back {
+    background-color: #172dff;
+    transform: rotateY(180deg);
+    min-width: 230px;
+    min-height: 320px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 24%;
+    border-radius: 140px / 200px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+
+
+}
+
+.back p {
+    margin-top: 160px;
+}
+
+/* End of inserted rotation section */
+/* =================================================================*/
 .oval-1 {
+    background: url("../images/foto-mlacki.jpg") 13px 0px;
+    background-size: 90%;
     background: url("../images/foto-mlacki.jpg") -31px -18px;
+    z-index: 2;
+    transform: rotateY(0deg);
 }
+
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
-    background-position: -17px 0px;
+    background-position: -22px 0px;
+    background-size: 110%;
+    background-position: -17px 0;
     background-size: 109%;
 }
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
-    background-position: -46px 12px;
+    background-position: -67px -63px;
+    background-size: 170%;
 }
 .oval-4 {
     background-image: url("../images/foto-alan.jpg");
@@ -274,6 +336,10 @@ body {
     padding-top: 20px;
     margin: auto;
     width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .podOwalem h3{
     background-color: rgb(111,119,139);
@@ -281,6 +347,7 @@ body {
     padding-bottom: 14px;
     text-align: center;
     color: wheat;
+    margin-top: 10px;
 }
 .zespol-opis {
     display: inline-block;
