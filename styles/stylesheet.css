@@ -61,8 +61,6 @@ body {
     border-radius: 5px;
     color: white;
     border-bottom: 1px solid rgb(120, 162, 186);
-
-
 }
 
 
@@ -248,12 +246,13 @@ body {
     display: inline-flex;
     perspective: 1000px;
     min-width: 230px;
-    min-height: 320px;
+    min-height: 230px;
     background-color: #ffdded;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
-    border-radius: 140px / 200px;
-
+    border-radius: 140px;
+    filter: brightness(200%);
+    background-repeat: no-repeat;
 
 }
 /*=======================================================================*/
@@ -271,30 +270,22 @@ body {
     transform: rotateY(180deg);
 }
 
-.oval-1, .back {
+.back {
+    background-color: rgb(50,92,164);
+    transform: rotateY(180deg);
+    min-width: 230px;
+    min-height: 230px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 24%;
+    border-radius: 140px;
+    position: absolute;
+    top: 0;
     /*width: inherit;*/
     /*height: inherit;*/
     /*position: absolute;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-
-}
-
-
-
-
-.back {
-    background-color: #172dff;
-    transform: rotateY(180deg);
-    min-width: 230px;
-    min-height: 320px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    width: 24%;
-    border-radius: 140px / 200px;
-    position: absolute;
-    text-align: center;
-    top: 0;
 
 
 }
@@ -303,32 +294,35 @@ body {
     margin-top: 160px;
 }
 
+.back img {
+    max-height: 50px;
+
+
+}
+
 /* End of inserted rotation section */
 /* =================================================================*/
 .oval-1 {
-    background: url("../images/foto-mlacki.jpg") 13px 0px;
-    background-size: 90%;
-    background: url("../images/foto-mlacki.jpg") -31px -18px;
-    z-index: 2;
-    transform: rotateY(0deg);
+    background: url("../images/foto-mlacki.jpg") -15px -48px;
+    background-size: 110%;
 }
 
 .oval-2 {
     background-image: url("../images/foto-rafal.jpg");
-    background-position: -22px 0px;
-    background-size: 110%;
-    background-position: -17px 0;
-    background-size: 109%;
+    background-position: -37px -60px;
+    background-size: 130%;
+
 }
 .oval-3 {
     background-image: url("../images/foto-daniel.jpg");
-    background-position: -67px -63px;
-    background-size: 170%;
+    background-position: -99px -130px;
+    background-size: 200%;
 }
 .oval-4 {
     background-image: url("../images/foto-alan.jpg");
-    background-position: -24px -21px;
-    background-size: 238px;
+    background-position: 14px -21px;
+    background-size: 85%;
+
 }
 .zespol {
     /*background-color: chartreuse;*/
@@ -341,16 +335,26 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.podOwalem h3{
-    background-color: rgb(111,119,139);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    text-align: center;
-    color: wheat;
-    margin-top: 10px;
+.podOwalem img {
+    display: block;
+    margin: 0 auto;
 }
+.podOwalem h3 {
+    text-align: center;
+
+}
+
+#our-team {
+    background-image: url("../images/our-team-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: ;
+}
+
 .zespol-opis {
     display: inline-block;
     margin: 10px;
+
 }
+
 /*info o zespole - koniec*/
