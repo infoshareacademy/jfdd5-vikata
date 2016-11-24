@@ -298,12 +298,20 @@ body {
     flex-wrap: wrap;
 }
 .podOwalem{
+    display: block;
+    text-align: center;
 
 }
 
+#our-team {
+    background-image: url("../images/our-team-bg.jpeg");
+    width: 100%;
+    max-width: 100%;
+}
 
 .zespol-opis {
     display: inline-block;
     margin: 10px;
+
 }
 /*info o zespole - koniec*/
