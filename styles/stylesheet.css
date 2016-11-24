@@ -297,16 +297,20 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.podOwalem{
+.podOwalem img {
     display: block;
+    margin: 0 auto;
+}
+.podOwalem h3 {
     text-align: center;
 
 }
 
 #our-team {
     background-image: url("../images/our-team-bg.jpeg");
-    width: 100%;
-    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: ;
 }
 
 .zespol-opis {
