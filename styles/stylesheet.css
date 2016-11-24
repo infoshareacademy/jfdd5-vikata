@@ -109,19 +109,19 @@ body {
 /******************************************/
 
 
-#odn_do_formularza {
+#odn-do-formularza {
     background-color: #142e47;
     text-align: center;
     padding: 5px 0;
 }
-#odn_do_formularza a {
+#odn-do-formularza a {
     position: absolute;
     text-decoration: none;
     color: white;
     font-size: 2em;
     text-shadow: 0 2px 8px black;
     display: block;
-    background-color: #193A59;
+    background-color: #1c4163;
     width: 400px;
     height: 60px;
     margin:-50px 50% 0;
@@ -132,11 +132,11 @@ body {
     border-right:0;
 }
 
-#odn_do_formularza a:hover{
+#odn-do-formularza a:hover{
     background-color: #1f486e;
 }
 
-#odn_do_formularza a:after {
+#odn-do-formularza a:after {
      content: "";
      display: block;
      background-color:inherit;
@@ -154,7 +154,7 @@ body {
      border-left: 0;
  }
 
-#odn_do_formularza a:before {
+#odn-do-formularza a:before {
     content: "";
     display: block;
     background-color:inherit;
@@ -257,41 +257,57 @@ body {
 /*               FORMULARZ              */
 /****************************************/
 
-#info {
-    height: 400px;
-    background-color: rgb(52, 124, 164);
-    font-size: 1rem;
+#zapis-na-premiere{
+    background-image: url("../images/start_line2.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
-    padding: 30px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
-#info h2{
-    font-size: 3em;
+#zapis-na-premiere h2{
+    font-size: 4em;
+    color: white;
+    text-shadow: 0px 0px 8px black;
 }
 
-#info h4{
-    font-size: 1.8em;
-    margin-top: 20px;
+.zapis-form{
+    width:600px;
+    padding: 60px;
+    height: 200px;
+    margin: 100px auto 0;
+    border:black solid 3px;
+    background-color: #e3e3e3;
 }
 
-#info form{
-    margin:50px;
-}
-
-#info input[type="email"]{
+.zapis-form input[type="email"]{
     width: 600px;
     height: 52px;
     font-size: 42px;
 }
 
-#info input[type="submit"]{
-    width: 160px;
-    height: 60px;
-    font-size: 33px;
-    font-variant: small-caps;
+.zapis-form input[type="submit"]{
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+    border:#1f486e solid 2px;
+    background-color: transparent;
     margin: 10px;
-    box-shadow: 0 12px 16px 0 rgba(25, 8, 26, 0.93), 0 17px 50px 0 rgba(49, 17, 60, 0.93);
     cursor: pointer;
+}
+
+.zapis-form input[type="submit"]:hover{
+    background-color: #3171ad;
+}
+
+.zapis-form p{
+    width: 480px;
+    padding: 10px;
+    border: #31592e 2px solid;
+    border-radius: 10px;
+    margin:40px auto;
 }
 
 /**********************************/
