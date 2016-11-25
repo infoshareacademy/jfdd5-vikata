@@ -8,8 +8,20 @@
 
 body {
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
 }
+
+h2{
+    font-size: 4em;
+    text-shadow: 0px 0px 8px black;
+    word-spacing: 8px;
+    color:white;
+}
+
+/**********************************/
+/*               MENU             */
+/**********************************/
 
 .nav {
     margin: 0 10px 10px 0;
@@ -63,82 +75,123 @@ body {
     border-bottom: 1px solid rgb(120, 162, 186);
 }
 
+/*************************************/
+/*               ZAJAWKA             */
+/*************************************/
 
 .opiszajawka {
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    color: white;
-    text-shadow: 0 2px 8px black;
-    /*position: absolute;*/
+    color: #e7e7e7;
+    text-shadow: 0 0px 40px black;
     left: 60px;
     top: 100px;
 }
 
 .opiszajawka h1 {
-    font-size: 5em;
+    font-size: 6em;
     padding-bottom: 25px;
+    line-height: 3em;
 }
 
-.opiszajawka h2, .opiszajawka h3 {
-    font-size: 3em;
+.opiszajawka h2 {
+    font-size: 4em;
+    line-height: 2em;
 }
 
 #what-we-do {
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-
-    background-color: rgba(51, 102, 153, 0.4);
+    background-color: rgba(1, 1, 2, 0.4);
     background-image: url("../images/auto.jpg");
     background-blend-mode: multiply;
     background-position: center top;
     background-repeat: no-repeat;
     height: 900px;
-
 }
 
+/******************************************/
+/*         ODNOŚNIK DO FORMULARZA         */
+/******************************************/
 
-/*Zajawka odniesienie do formularza*/
-#odn_do_formularza {
-    background-color: transparent;
-    /*position: absolute;*/
+
+#odn-do-formularza {
+    background-color: #183654;
     text-align: center;
-    left: 230px;
-    top: 665px;
+    padding: 5px 0;
+    font-family: 'Raleway', sans-serif;
 }
-#odn_do_formularza a {
+#odn-do-formularza a {
+    position: absolute;
     text-decoration: none;
-}
-#odn_do_formularza h1 {
     color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 4em;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    padding: 15px 45px;
+    font-size: 2em;
     text-shadow: 0 2px 8px black;
+    display: block;
+    background-color: #1f476c;
+    width: 400px;
+    height: 60px;
+    margin:-50px 50% 0;
+    left:-200px;
+    padding-top:20px;
+    z-index: 200;
+    border: #142e47 solid 8px;
+    border-right:0;
 }
 
+#odn-do-formularza a:hover{
+    background-color: #2a6194;
+}
 
+#odn-do-formularza a:after {
+     content: "";
+     display: block;
+     background-color:inherit;
+     width: 60px;
+     height: 80px;
+     position: absolute;
+     top: -8px; /* pull it up because of 1px border */
+     right: -40px; /* 35px / 2 */
+     transform: skew(-20deg);
+     -o-transform: skew(-20deg);
+     -moz-transform: skew(-20deg);
+     -webkit-transform: skew(-20deg);
+     z-index: -1;
+     border: #142e47 solid 8px;
+     border-left: 0;
+ }
 
+#odn-do-formularza a:before {
+    content: "";
+    display: block;
+    background-color:inherit;
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: -8px; /* pull it up because of 1px border */
+    right: 360px; /* 35px / 2 */
+    transform: skew(20deg);
+    -o-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+    z-index: -1;
+    border: #142e47 solid 8px;
+    border-right: 0;
+}
 
-
-
-/*FICZERY*/
+/******************************************/
+/*                 FICZERY                */
+/******************************************/
 #features{
-    height: 1500px;
+    height: 1600px;
     font-size: 1rem;
     text-align: center;
-    padding-top:60px;
+    padding-top:120px;
     background-image:url("../images/droga.jpg") ;
     background-size: auto 100%;
     background-position: center;
     color:white;
-}
-
-#features h2{
-    font-size: 5em;
 }
 
 .feature{
@@ -146,7 +199,7 @@ body {
     height: 260px;
     border: white solid 1px;
     border-radius: 130px;
-    margin-top:60px;
+    margin-top:100px;
     margin-left: 45%;
     background-color:transparent;
     transition: width 1s,background-color 1s;
@@ -156,10 +209,12 @@ body {
     margin-left: 35%;
 }
 
-.feature img{
+.feature i{
     display: block;
-    margin-left:100px;
+    font-size: 60px;
     margin-top: 40px;
+
+    width:260px;
 }
 
 .feature h3{
@@ -202,60 +257,88 @@ body {
 
 }
 
-/*FORMULARZ*/
+/****************************************/
+/*               FORMULARZ              */
+/****************************************/
 
-#info {
-    height: 400px;
-    background-color: rgb(52, 124, 164);
-    font-size: 1rem;
+#zapis-na-premiere{
+    background-image: url("../images/start_line2.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
     text-align: center;
-    padding: 30px;
+    padding-top: 100px;
+    padding-bottom: 200px;
 }
 
-#info h2{
-    font-size: 3em;
+.zapis-form{
+    width:600px;
+    padding: 60px;
+    height: 200px;
+    margin: 100px auto 0;
+    border:black solid 3px;
+    background-color: #e3e3e3;
 }
 
-#info h4{
-    font-size: 1.8em;
-    margin-top: 20px;
-}
-
-#info form{
-    margin:50px;
-}
-
-#info input[type="email"]{
+.zapis-form input[type="email"]{
     width: 600px;
     height: 52px;
     font-size: 42px;
 }
 
-#info input[type="submit"]{
-    width: 160px;
-    height: 60px;
-    font-size: 33px;
-    font-variant: small-caps;
+.zapis-form input[type="submit"]{
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+    border:#1f486e solid 2px;
+    background-color: transparent;
     margin: 10px;
-    box-shadow: 0 12px 16px 0 rgba(25, 8, 26, 0.93), 0 17px 50px 0 rgba(49, 17, 60, 0.93);
     cursor: pointer;
 }
 
-/*info o zespole*/
+.zapis-form input[type="submit"]:hover{
+    background-color: #3171ad;
+}
+
+.zapis-form p{
+    width: 480px;
+    padding: 10px;
+    border: #31592e 2px solid;
+    border-radius: 10px;
+    margin:40px auto;
+}
+
+/**********************************/
+/*          NASZE MORDKI          */
+/**********************************/
+
+#our-team {
+    background-color: #142e47;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 100px;
+
+}
+
+.zespol-opis {
+    display: inline-block;
+    margin: 10px;
+}
+
 .oval-1, .oval-2, .oval-3, .oval-4 {
     display: inline-flex;
     perspective: 1000px;
     min-width: 230px;
     min-height: 230px;
-    background-color: #ffdded;
+    background-color: white;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     width: 24%;
     border-radius: 140px;
     filter: brightness(100%);
     background-repeat: no-repeat;
-
+    margin-top: 60px;
 }
-/*=======================================================================*/
+
 /*new code for rotation*/
 
 .rotate{
@@ -263,7 +346,6 @@ body {
     transform-style: preserve-3d;
     position: relative;
     width: inherit;
-    /*height: inherit;*/
 }
 
 .rotate:hover {
@@ -280,28 +362,18 @@ body {
     border-radius: 140px;
     position: absolute;
     top: 0;
-    /*width: inherit;*/
-    /*height: inherit;*/
-    /*position: absolute;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-
-
-}
-
-.back p {
-    margin-top: 160px;
+    margin-top:60px;
 }
 
 .back img {
     max-height: 50px;
-
-
 }
 
 /* End of inserted rotation section */
-/* =================================================================*/
+
 .oval-1 {
     background: url("../images/foto-mlacki.jpg") -15px -48px;
     background-size: 110%;
@@ -336,25 +408,13 @@ body {
     flex-wrap: wrap;
 }
 .podOwalem img {
-    display: block;
-    margin: 0 auto;
+
+    margin: 70px 30px;
 }
 .podOwalem h3 {
     text-align: center;
-
+    position: relative;
+    top:50px;
+    font-size: 2em;
 }
-
-#our-team {
-    background-image: url("../images/our-team-bg.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-}
-
-.zespol-opis {
-    display: inline-block;
-    margin: 10px;
-
-}
-
-/*info o zespole - koniec*/
+/*356*/
