@@ -173,40 +173,8 @@
 </section>
 
 
-<script src="js/jquery-3.1.1.js"></script>
-
-<script>
-//  $('.rotate>div').click(function () {
-//    console.log("kliknieta sekcja teamu");
-//
-//  });
-
-// var x = $("#our-team).offset();
-//  console.log(x.top);
-
-//$("#our-team).offset();
-//  console.log(x.top);
-
-var playedRotation = false;
-
-$(window).scroll(function () {
-    console.log("scroll happened");
-
-    if ($(document).scrollTop() > $("#our-team").offset().top && !playedRotation) {
-      console.log("Scroll value:" + $(document).scrollTop());
-      playedRotation = true;
-      $(".oval-1").parent().addClass('force-show');
-
-      setTimeout(function () {
-        $(".oval-1").parent().removeClass('force-show');
-      }, 3000);
-    }
-  });
-
-
-
-
-</script>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script src="js/our-team-rotation.js"> </script>
 
 
 </body>
