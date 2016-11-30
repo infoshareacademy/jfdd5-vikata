@@ -2,10 +2,10 @@
 // 2. funkcja rysujaca divy co chwile na podstawie tabeli
 
 var board = [
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-    [0,1,1,1,0],
+    [0,0,0,0,0],
+    [0,0,1,1,0],
+    [0,1,0,1,0],
+    [0,1,1,0,0],
     [0,1,1,1,0],
     [0,1,1,1,0],
     [0,0,1,1,0],
@@ -37,8 +37,12 @@ function draw_board(){
     }
 }
 
-setInterval(function(){
+var board_move = setInterval (function(){
     $('.board').empty();
     draw_board();
     t--;
+    if(t<0)
+        clearInterval(board_move);
 }, 500);
+
+
