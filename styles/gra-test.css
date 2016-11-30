@@ -1,0 +1,25 @@
+.app-game{
+  width:600px;
+  height: 600px;
+  border:black solid 1px;
+  margin:100px auto;
+  padding: 60px;
+  background-color: #bcc9e7;
+  text-align: center;
+}
+
+.hud{
+  width:80px;
+  height: 500px;
+  border:black solid 1px;
+  float: left;
+  background-color: #2e6aa2;
+}
+
+.board{
+  width:500px;
+  height: 500px;
+  border:black solid 1px;
+  float:left;
+  background-color: white;
+}
