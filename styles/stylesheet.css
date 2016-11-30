@@ -362,7 +362,8 @@ h2 {
   width: inherit;
 }
 
-.rotate:hover {
+.rotate:hover,
+.force-show {
   transform: rotateY(180deg);
 }
 

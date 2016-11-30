@@ -192,17 +192,14 @@ var playedRotation = false;
 $(window).scroll(function () {
     console.log("scroll happened");
 
-    if ($(document).scrollTop() > $("#our-team").offset().top & !playedRotation) {
-
-
-
+    if ($(document).scrollTop() > $("#our-team").offset().top && !playedRotation) {
       console.log("Scroll value:" + $(document).scrollTop());
       playedRotation = true;
-      $(".oval-1").css("transform","rotateY(360deg)");
+      $(".oval-1").parent().addClass('force-show');
 
-//      $(".oval-1").animate(function () {
-//
-//      })
+      setTimeout(function () {
+        $(".oval-1").parent().removeClass('force-show');
+      }, 3000);
     }
   });
 
