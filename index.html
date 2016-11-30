@@ -173,7 +173,7 @@
 </section>
 
 
-<script src="/js/jquery-3.1.1.js"></script>
+<script src="js/jquery-3.1.1.js"></script>
 
 <script>
 //  $('.rotate>div').click(function () {
@@ -181,21 +181,28 @@
 //
 //  });
 
- var x = $('#our-team').offset();
+// var x = $("#our-team).offset();
 //  console.log(x.top);
 
+//$("#our-team).offset();
+//  console.log(x.top);
 
-  var y = $(window).scroll(function () {
+var playedRotation = false;
+
+$(window).scroll(function () {
     console.log("scroll happened");
 
-    if ($(document).scrollTop() > 3300) {
+    if ($(document).scrollTop() > $("#our-team").offset().top & !playedRotation) {
+
+
 
       console.log("Scroll value:" + $(document).scrollTop());
+      playedRotation = true;
+      $(".oval-1").css("transform","rotateY(360deg)");
 
-      $(".oval-1").animate({
-
-
-      })
+//      $(".oval-1").animate(function () {
+//
+//      })
     }
   });
 

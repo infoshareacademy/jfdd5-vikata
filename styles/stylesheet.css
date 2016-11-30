@@ -349,6 +349,8 @@ h2 {
   filter: brightness(100%);
   background-repeat: no-repeat;
   margin-top: 60px;
+  transition: 1.2s;
+  transform-style: preserve-3d;
 }
 
 /*new code for rotation*/
