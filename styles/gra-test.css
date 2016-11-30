@@ -1,5 +1,5 @@
 .app-game{
-  width:600px;
+  width:680px;
   height: 600px;
   border:black solid 1px;
   margin:100px auto;
@@ -9,9 +9,9 @@
 }
 
 .hud{
-  width:80px;
+  width:98px;
   height: 500px;
-  border:black solid 1px;
+  border:black solid 3px;
   float: left;
   background-color: #2e6aa2;
 }
@@ -19,7 +19,22 @@
 .board{
   width:500px;
   height: 500px;
-  border:black solid 1px;
+  border:black solid 3px;
   float:left;
   background-color: white;
+}
+
+.board__field{
+  width: 98px;
+  height: 98px;
+  border: black solid 1px;
+  float:left;
+}
+
+.board__field_road{
+  background-color: #4e5053;
+}
+
+.board__field_grass{
+  background-color: #3cb435;
 }
