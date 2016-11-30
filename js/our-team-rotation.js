@@ -20,14 +20,36 @@ var playedRotation = false;
 $(window).scroll(function () {
     console.log("scroll happened");
 
-    if ($(document).scrollTop() > $("#our-team").offset().top && !playedRotation) {
+    if ($(document).scrollTop() > $("#our-team").offset().top -500 && !playedRotation) {
         console.log("Scroll value:" + $(document).scrollTop());
-        playedRotation = true;
+        playedRotation = true; // Flag indicating that the rotation has been already conducted
+
         $(".oval-1").parent().addClass('force-show');
 
         setTimeout(function () {
             $(".oval-1").parent().removeClass('force-show');
+        }, 1000);
+
+
+        setTimeout(function () {
+            $(".oval-2").parent().addClass('force-show');
+        }, 1500);
+
+        setTimeout(function () {
+            $(".oval-2").parent().removeClass('force-show');
+        }, 2500);
+
+
+
+        setTimeout(function () {
+            $(".oval-4").parent().addClass('force-show');
         }, 3000);
+
+        setTimeout(function () {
+            $(".oval-4").parent().removeClass('force-show');
+        }, 4000);
+
+
     }
 });
 
