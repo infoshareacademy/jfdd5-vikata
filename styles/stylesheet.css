@@ -31,6 +31,12 @@ h2 {
   word-spacing: 8px;
   color: white;
 }
+.container {
+    max-width: 2048px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /**********************************/
 /*               MENU             */
@@ -99,17 +105,18 @@ h2 {
   text-shadow: 0 0px 40px black;
   left: 60px;
   top: 100px;
+  padding: 200px 0 100px 0;
 }
 
 .opiszajawka h1 {
-  font-size: 6em;
+  font-size: 10vw;
   padding-bottom: 25px;
-  line-height: 3em;
+  line-height: 5vw;
 }
 
 .opiszajawka h2 {
-  font-size: 4em;
-  line-height: 2em;
+  font-size: 6vw;
+  line-height: 10vw;
 }
 
 #home {
@@ -121,7 +128,7 @@ h2 {
   background-blend-mode: multiply;
   background-position: center top;
   background-repeat: no-repeat;
-  height: 900px;
+  background-size: cover;
 }
 
 /******************************************/
