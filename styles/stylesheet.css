@@ -122,6 +122,13 @@ h2 {
   background-position: center top;
   background-repeat: no-repeat;
   height: 900px;
+ }
+
+.slider {
+  background-image: none !important;
+  background-image: url("../images/workshop.jpg");
+  z-index: 3000;
+
 }
 
 /******************************************/
