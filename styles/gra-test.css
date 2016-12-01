@@ -10,25 +10,36 @@
 
 .hud{
   width:98px;
-  height: 500px;
+  height: 480px;
   border:black solid 3px;
   float: left;
   background-color: #2e6aa2;
 }
 
 .board{
-  width:500px;
-  height: 500px;
+  width:480px;
+  height: 480px;
   border:black solid 3px;
   float:left;
   background-color: white;
 }
 
 .board__field{
-  width: 98px;
-  height: 98px;
+  width: 58px;
+  height: 58px;
   border: black solid 1px;
   float:left;
+}
+
+.road-stripe:after{
+  content: "";
+  display: block;
+  width: 16px;
+  height: 40px;
+  position: relative;
+  top:10px;
+  left:52px;
+  background-color: white;
 }
 
 .board__field_road{
@@ -36,5 +47,7 @@
 }
 
 .board__field_grass{
+  position: relative;
   background-color: #3cb435;
+  z-index: 100000;
 }
