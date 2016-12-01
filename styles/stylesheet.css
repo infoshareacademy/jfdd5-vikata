@@ -510,6 +510,7 @@ h2 {
   text-align: center;
 }
 
+
 #menu li a, #menu li span
 {
   display: block;
@@ -521,12 +522,19 @@ h2 {
   text-transform: uppercase;
   outline: 0;
   color: #FFF;
-}
+ }
+
 
 #menu li:hover a, #menu li.active a, #menu li.active span
 {
 }
-
-#menu .current_page_item a
-{
+#menu li > a:hover {
+  background-color: rgba(18, 43, 114, 0.9);
+  font-size: 110%;
+  border-radius: 5px;
+  color: white;
+  border-bottom: 1px solid rgb(120, 162, 186);
+}
+#menu .current_page_item a {
   color: #FFF;
+}
