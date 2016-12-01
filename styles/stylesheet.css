@@ -117,7 +117,7 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(1, 1, 2, 0.4);
-  background-image: url("../images/auto.jpg");
+  /*background-image: url("../images/auto.jpg");*/
   background-blend-mode: multiply;
   background-position: center top;
   background-repeat: no-repeat;
@@ -125,9 +125,9 @@ h2 {
  }
 
 .slider {
-  background-image: none !important;
+  /*background-image: none !important;*/
   background-image: url("../images/workshop.jpg");
-  z-index: 3000;
+  z-index: 2000;
 
 }
 
