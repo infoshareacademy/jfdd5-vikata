@@ -117,25 +117,31 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(1, 1, 2, 0.4);
-    background-blend-mode: multiply;
+  background-blend-mode: multiply;
   background-position: center top;
   background-repeat: no-repeat;
   height: 900px;
   width: 100%;
   max-width: 1200px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
  }
 
 .slider1 {
-  background-image: url("../images/auto.jpg");
+  background: url("../images/auto.jpg");
+
  }
 
 .slider2 {
-  background-image: url("../images/workshop.jpg");
+  background: url("../images/workshop.jpg");
 }
 
 .slider3 {
-  background-image: url("../images/oldcar.jpg");
-
+  background: url("../images/oldcar.jpg");
 }
 
 
