@@ -1,49 +1,45 @@
 var board = [
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,1,0,0,0,0,1],
-    [1,0,0,1,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,1,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,1,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,1,1,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,1,0,1],
-    [1,0,0,0,0,1,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,1,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1]
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1]
 ];
 
-// var elements_on_board = [
-//     []
-// ]
-
-function menu(){
+function menu() {
 
     $('.gameplay').hide();
 
     $('.btn-goto-newgame').click(function () {
         $('.main-menu').hide();
         $('.gameplay').show();
-        gameplay();
+        new_game();
     });
 
     $('.btn-goto-mainmenu').click(function () {
@@ -51,81 +47,78 @@ function menu(){
         $('.gameplay').hide();
         reset_game();
     });
-
-
 }
-menu();
 
-function reset_game() {
-    t=board.length-8;
-    x=4;
-    time=[0,0];
-    speed=300;
+function new_game() {
+    y_position = board.length - 8;
+    x = 4;
+    time = [0, 0];
+    speed = 300;
+    var speed_change = false;
+    var animate;
     clearInterval(animate);
+
+    timer();
+    gameplay();
 }
 
-var t=board.length-8;
+function draw_board() {
+    $('.board').empty();
 
-function draw_board(){
-    for(var i=t;i<(t+8);i++){
-        for(var j=0;j<8;j++){
-            if(board[i][j]===0){
-                if(i%2===0&&j===3)
-                    $('.board').append('<div id='+(i-t)+j+' class="board__field board__field_road road-stripe"></div>');
+    for (var i = y_position; i < (y_position + 8); i++) {
+        for (var j = 0; j < 8; j++) {
+            if (board[i][j] === 0) {
+                if (i % 2 === 0 && j === 3)
+                    $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_road road-stripe"></div>');
                 else
-                    $('.board').append('<div id='+(i-t)+j+' class="board__field board__field_road"></div>');
+                    $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_road"></div>');
             }
             else
-                $('.board').append('<div id='+(i-t)+j+' class="board__field board__field_grass"></div>');
+                $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_grass"></div>');
         }
     }
 }
 
-var x=4;
-function draw_player(){
-    $('#7'+x).toggleClass('player').removeClass("road-stripe");
-    $('.hud__speed').text(-(speed-800)/5);
+function draw_player() {
+    $('#7' + x).toggleClass('player').removeClass("road-stripe");
+    $('.hud__speed').text(-(speed - 800) / 5);
 
 }
 
-function check_colision(){
-    if($('#7'+x).hasClass("board__field_grass")){
+function check_colision() {
+    if ($('#7' + x).hasClass("board__field_grass")) {
         alert('Hahahahah przegrałeś!');
     }
 }
 
-
-var time=[0,0];
-function timer(){
+function timer() {
     var seconds = setInterval(function () {
-        $('.hud__time').text(time[0]+':'+time[1]);
-        if(time[1]<59)
-        time[1]+=1;
-        else{
-            time[0]+=1;
-            time[1]=0;
+        $('.hud__time').text(time[0] + ':' + time[1]);
+        if (time[1] < 59)
+            time[1] += 1;
+        else {
+            time[0] += 1;
+            time[1] = 0;
         }
-    },1000);
+    }, 1000);
 }
-timer();
 
-var animate;
-var speed = 300;
-var speed_change=false;
 function gameplay() {
-     animate=setInterval(function () {
-        $('.board').empty();
+    animate = setInterval(function () {
+
         draw_board();
         draw_player();
         check_colision();
 
-        t--;
-        if (t < 0) {
-            t = board.length - 8;
+        y_position--;
+
+        if (y_position < 0) {
+            y_position = board.length - 8;
         }
-        if(speed_change){
+
+        if (speed_change) {
             clearInterval(animate);
-            speed_change=false;
+            speed_change = false;
             gameplay();
         }
     }, speed);
@@ -133,22 +126,23 @@ function gameplay() {
 
 }
 
-gameplay();
-
-$(document).keydown(function(e){
-    if (e.keyCode == 37 && x>1) {
-        x-=1;
+$(document).keydown(function (e) {
+    if (e.keyCode == 37 && x > 1) {
+        x -= 1;
     }
-    if (e.keyCode == 38 && speed>80) {
-        speed-=10;
-        speed_change=true;
+    if (e.keyCode == 38 && speed > 80) {
+        speed -= 10;
+        speed_change = true;
     }
-    if (e.keyCode == 39 && x<6) {
-        x+=1;
+    if (e.keyCode == 39 && x < 6) {
+        x += 1;
     }
-    if (e.keyCode == 40 && speed<600) {
-        speed+=10;
-        speed_change=true;
+    if (e.keyCode == 40 && speed < 600) {
+        speed += 10;
+        speed_change = true;
     }
 });
 
+menu();
+
+//154
