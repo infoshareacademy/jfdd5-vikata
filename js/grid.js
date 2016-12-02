@@ -65,6 +65,22 @@ function check_colision(){
         alert('Hahahahah przegrałeś!');
     }
 }
+
+
+var time=[0,0];
+function timer(){
+    var seconds = setInterval(function () {
+        $('.hud__time').text(time[0]+':'+time[1]);
+        if(time[1]<59)
+        time[1]+=1;
+        else{
+            time[0]+=1;
+            time[1]=0;
+        }
+    },1000);
+}
+timer();
+
 var speed = 300;
 var speed_change=false;
 function gameplay() {
@@ -73,6 +89,7 @@ function gameplay() {
         draw_board();
         draw_player();
         check_colision();
+
         t--;
         if (t < 0) {
             t = board.length - 8;
