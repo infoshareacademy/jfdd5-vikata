@@ -8,15 +8,24 @@
 </head>
 <body>
 <div class="app-game">
-  <h1>Gra Autonaprawiacz</h1>
-  <div class="hud">
-    <h3>Czas:</h3>
-    <p class="hud__time"></p>
-    <h3>Prędkość:</h3>
-    <p class="hud__speed"></p>
 
+  <div class="main-menu">
+    <h1>Autonaprawiacz</h1>
+    <h2>The Game</h2>
+    <button class="btn-goto-newgame">Nowa Gra</button>
+    <!--<button class="btn-high-scores">Ranking wyników</button>-->
   </div>
-  <div class="board"></div>
+
+  <div class="gameplay">
+      <div class="hud">
+        <h3>Czas:</h3>
+        <p class="hud__time"></p>
+        <h3>Prędkość:</h3>
+        <p class="hud__speed"></p>
+        <button class="btn-goto-mainmenu">MENU</button>
+       </div>
+    <div class="board"></div>
+  </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/grid.js"></script>

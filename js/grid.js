@@ -36,6 +36,34 @@ var board = [
 //     []
 // ]
 
+function menu(){
+
+    $('.gameplay').hide();
+
+    $('.btn-goto-newgame').click(function () {
+        $('.main-menu').hide();
+        $('.gameplay').show();
+        gameplay();
+    });
+
+    $('.btn-goto-mainmenu').click(function () {
+        $('.main-menu').show();
+        $('.gameplay').hide();
+        reset_game();
+    });
+
+
+}
+menu();
+
+function reset_game() {
+    t=board.length-8;
+    x=4;
+    time=[0,0];
+    speed=300;
+    clearInterval(animate);
+}
+
 var t=board.length-8;
 
 function draw_board(){
@@ -81,10 +109,11 @@ function timer(){
 }
 timer();
 
+var animate;
 var speed = 300;
 var speed_change=false;
 function gameplay() {
-    var animate=setInterval(function () {
+     animate=setInterval(function () {
         $('.board').empty();
         draw_board();
         draw_player();
