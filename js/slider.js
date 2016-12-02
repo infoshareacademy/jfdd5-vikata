@@ -2,9 +2,19 @@
  * Created by mlacki on 01.12.16.
  */
 
-// $("#home").css("background-image", "url(../images/workshop.jpg)" );
 
-$(".opiszajawka").parent().addClass("slider");
+
+$("#home").addClass("slider1");
+
+$("#home").removeClass();
+$("#home").addClass("slider2");
+
+$("#home").removeClass();
+$("#home").addClass("slider3");
+
+
+
+
 //
 //
 // $(document).ready(function()

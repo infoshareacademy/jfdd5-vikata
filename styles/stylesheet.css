@@ -117,19 +117,27 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(1, 1, 2, 0.4);
-  /*background-image: url("../images/auto.jpg");*/
-  background-blend-mode: multiply;
+    background-blend-mode: multiply;
   background-position: center top;
   background-repeat: no-repeat;
   height: 900px;
+  width: 100%;
+  max-width: 1200px;
  }
 
-.slider {
-  /*background-image: none !important;*/
+.slider1 {
+  background-image: url("../images/auto.jpg");
+ }
+
+.slider2 {
   background-image: url("../images/workshop.jpg");
-  z-index: 2000;
+}
+
+.slider3 {
+  background-image: url("../images/oldcar.jpg");
 
 }
+
 
 /******************************************/
 /*         ODNOŚNIK DO FORMULARZA         */
