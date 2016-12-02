@@ -55,7 +55,7 @@ function draw_board(){
 
 var x=4;
 function draw_player(){
-    $('#7'+x).toggleClass('player');
+    $('#7'+x).toggleClass('player').removeClass("road-stripe");
     $('.hud__speed').text(-(speed-800)/5);
 
 }
