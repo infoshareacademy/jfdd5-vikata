@@ -6,12 +6,22 @@ var board = [
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
+    [1,0,1,0,0,0,0,1],
+    [1,0,0,1,0,0,0,1],
+    [1,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,1,1],
+    [1,0,0,0,0,0,0,1],
+    [1,0,0,0,0,0,0,1],
+    [1,0,0,0,0,1,0,1],
+    [1,0,0,0,0,0,0,1],
+    [1,1,1,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
+    [1,0,0,0,0,1,0,1],
+    [1,0,0,0,0,1,0,1],
     [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1],
+    [1,0,1,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,1],
@@ -45,31 +55,54 @@ function draw_board(){
 
 var x=4;
 function draw_player(){
-
     $('#7'+x).toggleClass('player');
+    $('.hud__speed').text(-(speed-800)/5);
+
+}
+
+function check_colision(){
+    if($('#7'+x).hasClass("board__field_grass")){
+        alert('Hahahahah przegrałeś!');
+    }
+}
+var speed = 300;
+var speed_change=false;
+function gameplay() {
+    var animate=setInterval(function () {
+        $('.board').empty();
+        draw_board();
+        draw_player();
+        check_colision();
+        t--;
+        if (t < 0) {
+            t = board.length - 8;
+        }
+        if(speed_change){
+            clearInterval(animate);
+            speed_change=false;
+            gameplay();
+        }
+    }, speed);
 
 
 }
 
-setInterval (function(){
-    $('.board').empty();
-    draw_board();
-    draw_player();
-
-    t--;
-    if(t<0){
-        // clearInterval(board_move);
-        t=board.length-8;
-    }
-
-}, 300);
+gameplay();
 
 $(document).keydown(function(e){
     if (e.keyCode == 37 && x>1) {
         x-=1;
     }
+    if (e.keyCode == 38 && speed>80) {
+        speed-=10;
+        speed_change=true;
+    }
     if (e.keyCode == 39 && x<6) {
         x+=1;
+    }
+    if (e.keyCode == 40 && speed<600) {
+        speed+=10;
+        speed_change=true;
     }
 });
 
