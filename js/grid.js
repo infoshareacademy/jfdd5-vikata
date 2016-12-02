@@ -42,6 +42,7 @@ function draw_board(){
         }
     }
 }
+
 var x=4;
 function draw_player(){
 
@@ -50,7 +51,7 @@ function draw_player(){
 
 }
 
-var board_move = setInterval (function(){
+setInterval (function(){
     $('.board').empty();
     draw_board();
     draw_player();
@@ -62,11 +63,12 @@ var board_move = setInterval (function(){
     }
 
 }, 300);
+
 $(document).keydown(function(e){
-    if (e.keyCode == 37) {
+    if (e.keyCode == 37 && x>1) {
         x-=1;
     }
-    if (e.keyCode == 39) {
+    if (e.keyCode == 39 && x<6) {
         x+=1;
     }
 });

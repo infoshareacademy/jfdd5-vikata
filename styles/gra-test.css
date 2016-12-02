@@ -53,5 +53,7 @@
 }
 
 .player{
+  position: relative;
+  z-index: 20;
   background-color: #aa4c36;
 }
