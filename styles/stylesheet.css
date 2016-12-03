@@ -149,8 +149,8 @@ h2 {
 }
 
 .carousel-indicators {
-  position: fixed;
-  margin-bottom: 100px;
+  position: absolute;
+  margin-bottom: 10px;
 
 }
 

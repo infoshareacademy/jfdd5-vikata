@@ -10,7 +10,7 @@ $(sliderDots[slideId]).addClass("active");
 function slideRight () {
     $("#home").removeClass(sliderClasses[slideId]);
     $("li.active").removeClass("active")
-    slideId = (slideId + 1) % sliderClasses.length;
+    slideId = (slideId+1)% sliderClasses.length;
     $("#home").addClass(sliderClasses[slideId]);
     $(sliderDots[slideId]).addClass("active");
 
@@ -45,6 +45,32 @@ $('.dot3').click(function(){
     slideId = 2;
     $("#home").addClass(sliderClasses[slideId]);
 });
+
+
+$('a.right.carousel-control').click(function(){
+    $("li.active").removeClass("active")
+    $("#home").removeClass(sliderClasses[slideId]);
+
+    if (slideId < sliderClasses.length -1 ) {
+        slideId+=1} else slideId=0;
+
+    $(sliderDots[slideId]).addClass("active");
+    $("#home").addClass(sliderClasses[slideId]);
+});
+
+$('a.left.carousel-control').click(function(){
+    $("li.active").removeClass("active")
+    $("#home").removeClass(sliderClasses[slideId]);
+
+    if (slideId > 0 ) {
+        slideId-=1} else slideId=2;
+
+    $(sliderDots[slideId]).addClass("active");
+    $("#home").addClass(sliderClasses[slideId]);
+
+});
+
+
 
 
 
