@@ -131,9 +131,13 @@ h2 {
 
  }
 
+
+/******************************************/
+/*        SLIDER                       */
+/******************************************/
+
 .slider1 {
   background: url("../images/auto.jpg");
-
  }
 
 .slider2 {
@@ -142,6 +146,12 @@ h2 {
 
 .slider3 {
   background: url("../images/oldcar.jpg");
+}
+
+.carousel-indicators {
+  position: fixed;
+  margin-bottom: 100px;
+
 }
 
 
