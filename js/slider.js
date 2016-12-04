@@ -13,7 +13,6 @@ function slideRight() {
     slideId = (slideId + 1) % sliderClasses.length;
     $("#home").addClass(sliderClasses[slideId]);
     $(sliderDots[slideId]).addClass("active");
-
 }
 
 var counter = setInterval(slideRight, 5000);
@@ -21,7 +20,6 @@ var counter = setInterval(slideRight, 5000);
 $('.dot1').click(function () {
     $("li.active").removeClass("active")
     $(this).addClass('active');
-
 
     $("#home").removeClass(sliderClasses[slideId]);
     slideId = 0;
@@ -69,12 +67,4 @@ $('a.left.carousel-control').click(function () {
 
     $(sliderDots[slideId]).addClass("active");
     $("#home").addClass(sliderClasses[slideId]);
-
 });
-
-
-
-
-
-
-
