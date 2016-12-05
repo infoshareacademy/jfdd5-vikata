@@ -14,6 +14,12 @@
   background-color: lightpink;
 }
 
+.game-over{
+  width:600px;
+  height: 480px;
+  background-color: lightpink;
+}
+
 .hud{
   width:98px;
   height: 480px;

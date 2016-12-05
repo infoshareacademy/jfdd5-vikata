@@ -32,20 +32,37 @@ var board = [
     [1, 0, 0, 0, 0, 0, 0, 1]
 ];
 
-function menu() {
+var speedChange=false;
+var yPosition = board.length - 8;
+var x = 4;
+var time = [0, 0];
+var speed = 300;
+var animate;
+var seconds;
 
-    $('.gameplay').hide();
+function menu(target) {
 
-    $('.btn-goto-newgame').click(function () {
-        $('.main-menu').hide();
-        $('.gameplay').show();
-        newGame();
-    });
-
-    $('.btn-goto-mainmenu').click(function () {
-        $('.main-menu').show();
-        $('.gameplay').hide();
-    });
+    switch (target){
+        case 0:
+        {//menu
+            $('.main-menu').show();
+            $('.gameplay').hide();
+            $('.game-over').hide();
+        }break;
+        case 1:
+        {//nowa gra
+            $('.main-menu').hide();
+            $('.game-over').hide();
+            $('.gameplay').show();
+            newGame();
+        }break;
+        case 2:
+        {//game over
+            $('.main-menu').hide();
+            $('.gameplay').hide();
+            $('.game-over').show();
+        }break;
+    }
 }
 
 function newGame() {
@@ -53,11 +70,17 @@ function newGame() {
     x = 4;
     time = [0, 0];
     speed = 300;
-    var animate;
-    clearInterval(animate);
 
+    clearInterval(animate);
+    clearInterval(seconds);
     timer();
     gameplay();
+}
+
+function gameOver(){
+    clearInterval(animate);
+    clearInterval(seconds);
+    menu(2);
 }
 
 function drawBoard() {
@@ -85,12 +108,12 @@ function drawPlayer() {
 
 function checkColision() {
     if ($('#7' + x).hasClass("board__field_grass")) {
-        alert('Hahahahah przegrałeś!');
+        gameOver();
     }
 }
 
 function timer() {
-    var seconds = setInterval(function () {
+    seconds = setInterval(function () {
         $('.hud__time').text(time[0] + ':' + time[1]);
         if (time[1] < 59)
             time[1] += 1;
@@ -124,6 +147,14 @@ function gameplay() {
 
 }
 
+$('.btn-goto-mainmenu').click(function () {
+    menu(0);
+})
+
+$('.btn-goto-newgame').click(function () {
+    menu(1);
+})
+
 $(document).keydown(function (e) {
     if (e.keyCode == 37 && x > 1) {
         x -= 1;
@@ -141,6 +172,6 @@ $(document).keydown(function (e) {
     }
 });
 
-menu();
+menu(0);
 
 //154
