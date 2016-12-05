@@ -39,22 +39,20 @@ function menu() {
     $('.btn-goto-newgame').click(function () {
         $('.main-menu').hide();
         $('.gameplay').show();
-        new_game();
+        newGame();
     });
 
     $('.btn-goto-mainmenu').click(function () {
         $('.main-menu').show();
         $('.gameplay').hide();
-        reset_game();
     });
 }
 
-function new_game() {
-    y_position = board.length - 8;
+function newGame() {
+    yPosition = board.length - 8;
     x = 4;
     time = [0, 0];
     speed = 300;
-    var speed_change = false;
     var animate;
     clearInterval(animate);
 
@@ -62,30 +60,30 @@ function new_game() {
     gameplay();
 }
 
-function draw_board() {
+function drawBoard() {
     $('.board').empty();
 
-    for (var i = y_position; i < (y_position + 8); i++) {
+    for (var i = yPosition; i < (yPosition + 8); i++) {
         for (var j = 0; j < 8; j++) {
             if (board[i][j] === 0) {
                 if (i % 2 === 0 && j === 3)
-                    $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_road road-stripe"></div>');
+                    $('.board').append('<div id=' + (i - yPosition) + j + ' class="board__field board__field_road road-stripe"></div>');
                 else
-                    $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_road"></div>');
+                    $('.board').append('<div id=' + (i - yPosition) + j + ' class="board__field board__field_road"></div>');
             }
             else
-                $('.board').append('<div id=' + (i - y_position) + j + ' class="board__field board__field_grass"></div>');
+                $('.board').append('<div id=' + (i - yPosition) + j + ' class="board__field board__field_grass"></div>');
         }
     }
 }
 
-function draw_player() {
+function drawPlayer() {
     $('#7' + x).toggleClass('player').removeClass("road-stripe");
     $('.hud__speed').text(-(speed - 800) / 5);
 
 }
 
-function check_colision() {
+function checkColision() {
     if ($('#7' + x).hasClass("board__field_grass")) {
         alert('Hahahahah przegrałeś!');
     }
@@ -106,19 +104,19 @@ function timer() {
 function gameplay() {
     animate = setInterval(function () {
 
-        draw_board();
-        draw_player();
-        check_colision();
+        drawBoard();
+        drawPlayer();
+        checkColision();
 
-        y_position--;
+        yPosition--;
 
-        if (y_position < 0) {
-            y_position = board.length - 8;
+        if (yPosition < 0) {
+            yPosition = board.length - 8;
         }
 
-        if (speed_change) {
+        if (speedChange) {
             clearInterval(animate);
-            speed_change = false;
+            speedChange = false;
             gameplay();
         }
     }, speed);
@@ -132,14 +130,14 @@ $(document).keydown(function (e) {
     }
     if (e.keyCode == 38 && speed > 80) {
         speed -= 10;
-        speed_change = true;
+        speedChange = true;
     }
     if (e.keyCode == 39 && x < 6) {
         x += 1;
     }
     if (e.keyCode == 40 && speed < 600) {
         speed += 10;
-        speed_change = true;
+        speedChange = true;
     }
 });
 
