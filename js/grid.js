@@ -71,11 +71,13 @@ function menu(target) {
             $('.main-menu').show();
             $('.gameplay').hide();
             $('.game-over').hide();
+            $('.instructions').hide();
         }
             break;
         case 1: {//nowa gra
             $('.main-menu').hide();
             $('.game-over').hide();
+            $('.instructions').hide();
             $('.gameplay').show();
             newGame();
         }
@@ -84,6 +86,12 @@ function menu(target) {
             $('.main-menu').hide();
             $('.gameplay').hide();
             $('.game-over').show();
+        }
+            break;
+        case 3: {//instructions
+            $('.main-menu').hide();
+            $('.gameplay').hide();
+            $('.instructions').show();
         }
             break;
     }
@@ -185,6 +193,10 @@ $('.btn-goto-mainmenu').click(function () {
 
 $('.btn-goto-newgame').click(function () {
     menu(1);
+})
+
+$('.btn-goto-instructions').click(function () {
+    menu(3);
 })
 
 $(document).keydown(function (e) {
