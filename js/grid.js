@@ -64,19 +64,17 @@ var clients = 0;
 var animate;
 var seconds;
 var topScore=0;
-var game=false;
-$('.hud__top-score').text(topScore);
 
 function menu(target) {
 
     switch (target) {
         case 0: {//menu
             $('.main-menu').show();
+            $('.hud__top-score').text(topScore);
             $('.gameplay').hide();
             $('.game-over').hide();
             $('.instructions').hide();
             clearInterval(animate);
-            game=false;
         }
             break;
         case 1: {//nowa gra
@@ -112,7 +110,6 @@ function newGame() {
     clearInterval(animate);
     clearInterval(seconds);
     timer();
-    game=true;
     gameplay();
 }
 
@@ -122,7 +119,6 @@ function gameOver() {
     if(topScore<clients){
         topScore=clients;
     }
-    game=false;
     menu(2);
 }
 
@@ -168,33 +164,31 @@ function timer() {
 }
 
 function gameplay() {
-    if(game){
-        animate = setInterval(function () {
+    animate = setInterval(function () {
 
-            drawBoard();
-            drawPlayer();
-            checkColision();
+        drawBoard();
+        drawPlayer();
+        checkColision();
 
-            yPosition--;
+        yPosition--;
 
-            if (yPosition < 0) {
-                yPosition = board.length - 8;
-                clearInterval(animate);
-                clients+=1;
-                $('.hud__clients').text(clients);
-                if(speed>=80){
-                    speed -= (20-clients);
-                }
-                gameplay();
+        if (yPosition < 0) {
+            yPosition = board.length - 8;
+            clearInterval(animate);
+            clients+=1;
+            $('.hud__clients').text(clients);
+            if(speed>=80){
+                speed -= (20-clients);
             }
+            gameplay();
+        }
 
-            if (speedChange) {
-                clearInterval(animate);
-                speedChange = false;
-                gameplay();
-            }
-        }, speed);
-    }
+        if (speedChange) {
+            clearInterval(animate);
+            speedChange = false;
+            gameplay();
+        }
+    }, speed);
 }
 
 $('.btn-goto-mainmenu').click(function () {
