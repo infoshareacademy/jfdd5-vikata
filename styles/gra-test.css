@@ -1,70 +1,70 @@
-.app-game{
-  width:680px;
+.app-game {
+  width: 680px;
   height: 600px;
-  border:black solid 1px;
-  margin:100px auto;
+  border: black solid 1px;
+  margin: 100px auto;
   padding: 60px;
   background-color: #bcc9e7;
   text-align: center;
 }
 
-.main-menu{
-  width:600px;
+.main-menu {
+  width: 600px;
   height: 480px;
   background-color: lightpink;
 }
 
-.game-over{
-  width:600px;
+.game-over {
+  width: 600px;
   height: 480px;
   background-color: lightpink;
 }
 
-.hud{
-  width:98px;
+.hud {
+  width: 98px;
   height: 480px;
-  border:black solid 3px;
+  border: black solid 3px;
   float: left;
   background-color: #2e6aa2;
 }
 
-.board{
-  width:480px;
+.board {
+  width: 480px;
   height: 480px;
-  border:black solid 3px;
-  float:left;
+  border: black solid 3px;
+  float: left;
   background-color: white;
 }
 
-.board__field{
+.board__field {
   width: 58px;
   height: 58px;
   border: black solid 1px;
-  float:left;
+  float: left;
 }
 
-.road-stripe:after{
+.road-stripe:after {
   content: "";
   display: block;
   width: 16px;
   height: 40px;
   position: relative;
-  top:10px;
-  left:52px;
+  top: 10px;
+  left: 52px;
   background-color: white;
 }
 
-.board__field_road{
+.board__field_road {
   background-color: #4e5053;
 }
 
-.board__field_grass{
+.board__field_grass {
   position: relative;
   background-color: #3cb435;
   z-index: 100000;
 }
 
-.player{
+.player {
   position: relative;
   z-index: 20;
   background-color: #aa4c36;

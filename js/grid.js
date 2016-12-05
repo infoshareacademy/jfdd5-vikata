@@ -5,7 +5,7 @@ var board = [
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],// \/
     [1, 0, 1, 0, 0, 0, 0, 1],
     [1, 0, 0, 1, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
@@ -22,7 +22,7 @@ var board = [
     [1, 0, 0, 0, 0, 1, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 1, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],// /\ tu idzie poziom
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0, 0, 0, 0, 0, 0, 1],
@@ -32,36 +32,37 @@ var board = [
     [1, 0, 0, 0, 0, 0, 0, 1]
 ];
 
-var speedChange=false;
+var speedChange = false;
 var yPosition = board.length - 8;
 var x = 4;
 var time = [0, 0];
 var speed = 300;
+var clients = 0;
 var animate;
 var seconds;
 
 function menu(target) {
 
-    switch (target){
-        case 0:
-        {//menu
+    switch (target) {
+        case 0: {//menu
             $('.main-menu').show();
             $('.gameplay').hide();
             $('.game-over').hide();
-        }break;
-        case 1:
-        {//nowa gra
+        }
+            break;
+        case 1: {//nowa gra
             $('.main-menu').hide();
             $('.game-over').hide();
             $('.gameplay').show();
             newGame();
-        }break;
-        case 2:
-        {//game over
+        }
+            break;
+        case 2: {//game over
             $('.main-menu').hide();
             $('.gameplay').hide();
             $('.game-over').show();
-        }break;
+        }
+            break;
     }
 }
 
@@ -70,14 +71,15 @@ function newGame() {
     x = 4;
     time = [0, 0];
     speed = 300;
-
+    clients = 0;
+    $('.hud__clients').text(clients);
     clearInterval(animate);
     clearInterval(seconds);
     timer();
     gameplay();
 }
 
-function gameOver(){
+function gameOver() {
     clearInterval(animate);
     clearInterval(seconds);
     menu(2);
@@ -135,6 +137,13 @@ function gameplay() {
 
         if (yPosition < 0) {
             yPosition = board.length - 8;
+            clearInterval(animate);
+            clients+=1;
+            $('.hud__clients').text(clients);
+            if(speed>=80){
+                speed -= 10;
+            }
+            gameplay();
         }
 
         if (speedChange) {
@@ -159,17 +168,17 @@ $(document).keydown(function (e) {
     if (e.keyCode == 37 && x > 1) {
         x -= 1;
     }
-    if (e.keyCode == 38 && speed > 80) {
-        speed -= 10;
-        speedChange = true;
-    }
+    // if (e.keyCode == 38 && speed > 80) {
+    //     speed -= 10;
+    //     speedChange = true;
+    // }
     if (e.keyCode == 39 && x < 6) {
         x += 1;
     }
-    if (e.keyCode == 40 && speed < 600) {
-        speed += 10;
-        speedChange = true;
-    }
+    // if (e.keyCode == 40 && speed < 600) {
+    //     speed += 10;
+    //     speedChange = true;
+    // }
 });
 
 menu(0);
