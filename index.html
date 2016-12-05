@@ -12,9 +12,12 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="https://use.fontawesome.com/42dbf5ec21.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 
 <body>
+
 
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,15 +49,31 @@
       </div>
     </div>
   </nav>
-<section id="home">
-  <div class="opiszajawka">
+
+  <section id="home" class="opiszajawka">
     <h1> AUTONAPRAWIACZ</h1>
 
     <h2>Poszukujesz części do swojego samochodu?</h2>
 
     <h2>Z nami będzie to prostsze.</h2>
-  </div>
-</section>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="dot1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" class="dot2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2" class="dot3"></li>
+    </ol>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </section>
 
 <div id="odn-do-formularza">
   <a href="#zapis-na-premiere">ZAPISZ SIĘ NA PREMIERĘ</a>
@@ -182,13 +201,12 @@
   </div>
 </section>
 
+</div>
 <script src="bootstrap/jquery.min.js" ></script>
 <script src="bootstrap/bootstrap.min.js" ></script>
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script src="js/our-team-rotation.js"> </script>
-
-</div>
+<script src="js/slider.js"> </script>
 
 </body>
-
 </html>
