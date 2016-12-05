@@ -59,10 +59,13 @@ var speedChange = false;
 var yPosition = board.length - 8;
 var x = 4;
 var time = [0, 0];
-var speed = 300;
+var speed = 280;
 var clients = 0;
 var animate;
 var seconds;
+var topScore=0;
+var game=false;
+$('.hud__top-score').text(topScore);
 
 function menu(target) {
 
@@ -72,6 +75,8 @@ function menu(target) {
             $('.gameplay').hide();
             $('.game-over').hide();
             $('.instructions').hide();
+            clearInterval(animate);
+            game=false;
         }
             break;
         case 1: {//nowa gra
@@ -101,18 +106,23 @@ function newGame() {
     yPosition = board.length - 8;
     x = 4;
     time = [0, 0];
-    speed = 300;
+    speed = 280;
     clients = 0;
     $('.hud__clients').text(clients);
     clearInterval(animate);
     clearInterval(seconds);
     timer();
+    game=true;
     gameplay();
 }
 
 function gameOver() {
     clearInterval(animate);
     clearInterval(seconds);
+    if(topScore<clients){
+        topScore=clients;
+    }
+    game=false;
     menu(2);
 }
 
@@ -158,33 +168,33 @@ function timer() {
 }
 
 function gameplay() {
-    animate = setInterval(function () {
+    if(game){
+        animate = setInterval(function () {
 
-        drawBoard();
-        drawPlayer();
-        checkColision();
+            drawBoard();
+            drawPlayer();
+            checkColision();
 
-        yPosition--;
+            yPosition--;
 
-        if (yPosition < 0) {
-            yPosition = board.length - 8;
-            clearInterval(animate);
-            clients+=1;
-            $('.hud__clients').text(clients);
-            if(speed>=80){
-                speed -= (20-clients);
+            if (yPosition < 0) {
+                yPosition = board.length - 8;
+                clearInterval(animate);
+                clients+=1;
+                $('.hud__clients').text(clients);
+                if(speed>=80){
+                    speed -= (20-clients);
+                }
+                gameplay();
             }
-            gameplay();
-        }
 
-        if (speedChange) {
-            clearInterval(animate);
-            speedChange = false;
-            gameplay();
-        }
-    }, speed);
-
-
+            if (speedChange) {
+                clearInterval(animate);
+                speedChange = false;
+                gameplay();
+            }
+        }, speed);
+    }
 }
 
 $('.btn-goto-mainmenu').click(function () {
