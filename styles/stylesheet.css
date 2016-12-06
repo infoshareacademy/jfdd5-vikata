@@ -376,7 +376,8 @@ h2 {
   margin-top: 60px;
   transition: 1.2s;
   transform-style: preserve-3d;
-}
+  mix-blend-mode: exclusion;
+ }
 
 /*new code for rotation*/
 
@@ -393,7 +394,7 @@ h2 {
 }
 
 .back {
-  background-color: rgb(50, 92, 164);
+  /*background-color: white;*/
   transform: rotateY(180deg);
   min-width: 230px;
   min-height: 230px;
@@ -415,27 +416,20 @@ h2 {
 /* End of inserted rotation section */
 
 .oval-1 {
-  background: url("../images/foto-mlacki.jpg") -15px -48px;
-  background-size: 110%;
+  background: url("../images/michal_front.jpg");
+  background-size: cover;
 }
 
 .oval-2 {
-  background-image: url("../images/foto-rafal.jpg");
-  background-position: -37px -60px;
-  background-size: 130%;
+  background-image: url("../images/rafal_front.jpg");
+  background-size: cover;
 
-}
-
-.oval-3 {
-  background-image: url("../images/foto-daniel.jpg");
-  background-position: -99px -130px;
-  background-size: 200%;
 }
 
 .oval-4 {
-  background-image: url("../images/foto-alan.jpg");
-  background-position: 14px -21px;
-  background-size: 85%;
+  background-image: url("../images/alan_front.jpg");
+  /*background-position: 14px -21px;*/
+  background-size: cover;
 
 }
 
@@ -451,14 +445,29 @@ h2 {
   flex-wrap: wrap;
 }
 
-.podOwalem img {
+.podOwalem1{
 
-  margin: 70px 30px;
+  background-image: url("../images/michal_back.jpg");
+  height: 230px;
+  background-size: cover;
+  border-radius: 50%;
 }
 
-.podOwalem h3 {
-  text-align: center;
-  position: relative;
-  top: 50px;
-  font-size: 2em;
+.podOwalem2 {
+
+
+}
+
+.podOwalem4 {
+
+
+}
+
+
+
+.zespol-opis img {
+  display: block;
+  width: 30px;
+  height: 30px;
+
 }
