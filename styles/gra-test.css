@@ -72,7 +72,19 @@
 .board__field_grass {
   position: relative;
   background-color: #3cb435;
-  z-index: 100000;
+  z-index: 10;
+}
+
+.board__field_client {
+  position: relative;
+  background-color: #b48e4a;
+  z-index: 10;
+}
+
+.board__field_block {
+  position: relative;
+  background-color: #191409;
+  z-index: 10;
 }
 
 .player {
