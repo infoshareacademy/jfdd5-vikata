@@ -48,7 +48,7 @@ $(document).ready(function () {
         [1, 0, 3, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],// /\ tu idzie poziom
         [1, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 4, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
@@ -105,12 +105,11 @@ $(document).ready(function () {
         yPosition = board.length - 8;
         x = 4;
         time = [0, 0];
-        speed = 280;
+        speed = 250;
         clients = 0;
         $('.hud__clients').text(clients);
         clearInterval(animate);
         clearInterval(seconds);
-        timer();
         gameplay();
     }
 
@@ -154,8 +153,12 @@ $(document).ready(function () {
                         if (board[i][j] === 3) {
                             return 'board__field board__field_block';
                         }
+
+                        if (board[i][j] === 4) {
+                            return 'board__field board__field_red-dzik';
+                        }
                     })
-                );;
+                );
             }
         }
     }
@@ -167,22 +170,36 @@ $(document).ready(function () {
     }
 
     function checkColision() {
-        if ($('#7' + x).hasClass("board__field_grass")) {
+        if ($('#7' + x).hasClass("board__field_block")) {
             gameOver();
+        }
+
+        if ($('#7' + x).hasClass("board__field_red-dzik")) {
+            elementReddzik();
         }
     }
 
-    function timer() {
-        seconds = setInterval(function () {
-            $('.hud__time').text(time[0] + ':' + time[1]);
-            if (time[1] < 59)
-                time[1] += 1;
-            else {
-                time[0] += 1;
-                time[1] = 0;
-            }
-        }, 1000);
+    function elementReddzik(){
+        speed-=100;
+        speedChange=true;
+        var turbo = setInterval(function () {
+            speed+=100;
+            speedChange=true;
+            clearInterval(turbo);
+        },2000);
     }
+
+    // function timer() {
+    //     seconds = setInterval(function () {
+    //         $('.hud__time').text(time[0] + ':' + time[1]);
+    //         if (time[1] < 59)
+    //             time[1] += 1;
+    //         else {
+    //             time[0] += 1;
+    //             time[1] = 0;
+    //         }
+    //     }, 1000);
+    // }
 
     function gameplay() {
         animate = setInterval(function () {

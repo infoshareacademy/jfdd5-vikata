@@ -87,6 +87,12 @@
   z-index: 10;
 }
 
+.board__field_red-dzik {
+  position: relative;
+  background-color: #2936be;
+  z-index: 10;
+}
+
 .player {
   position: relative;
   z-index: 20;
