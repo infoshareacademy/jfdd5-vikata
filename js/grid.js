@@ -39,7 +39,7 @@ $(document).ready(function () {
         [1, 0, 0, 0, 0, 3, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 3, 0, 0, 0, 0, 1],
-        [1, 0, 0, 3, 0, 0, 0, 1],
+        [1, 4, 0, 3, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 3, 0, 0, 1],
         [1, 0, 0, 0, 0, 3, 0, 1],
@@ -48,7 +48,7 @@ $(document).ready(function () {
         [1, 0, 3, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],// /\ tu idzie poziom
         [1, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 4, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 1],
@@ -180,26 +180,15 @@ $(document).ready(function () {
     }
 
     function elementReddzik(){
-        speed-=100;
+        var turboValue=speed*0.4;
+        speed-=turboValue;
         speedChange=true;
         var turbo = setInterval(function () {
-            speed+=100;
+            speed+=turboValue;
             speedChange=true;
             clearInterval(turbo);
-        },2000);
+        },1500);
     }
-
-    // function timer() {
-    //     seconds = setInterval(function () {
-    //         $('.hud__time').text(time[0] + ':' + time[1]);
-    //         if (time[1] < 59)
-    //             time[1] += 1;
-    //         else {
-    //             time[0] += 1;
-    //             time[1] = 0;
-    //         }
-    //     }, 1000);
-    // }
 
     function gameplay() {
         animate = setInterval(function () {
@@ -245,17 +234,10 @@ $(document).ready(function () {
         if (e.keyCode == 37 && x > 1) {
             x -= 1;
         }
-        // if (e.keyCode == 38 && speed > 80) {
-        //     speed -= 10;
-        //     speedChange = true;
-        // }
+
         if (e.keyCode == 39 && x < 6) {
             x += 1;
         }
-        // if (e.keyCode == 40 && speed < 600) {
-        //     speed += 10;
-        //     speedChange = true;
-        // }
     });
 
     menu(0);

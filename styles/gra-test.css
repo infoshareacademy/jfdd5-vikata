@@ -48,9 +48,9 @@
 }
 
 .board__field {
-  width: 58px;
-  height: 58px;
-  border: black solid 1px;
+  width: 60px;
+  height: 60px;
+  /*border: black solid 1px;*/
   float: left;
 }
 
@@ -72,29 +72,27 @@
 .board__field_grass {
   position: relative;
   background-color: #3cb435;
-  z-index: 10;
+
 }
 
 .board__field_client {
   position: relative;
   background-color: #b48e4a;
-  z-index: 10;
+
 }
 
 .board__field_block {
   position: relative;
   background-color: #191409;
-  z-index: 10;
 }
 
 .board__field_red-dzik {
   position: relative;
   background-color: #2936be;
-  z-index: 10;
 }
 
 .player {
   position: relative;
   z-index: 20;
-  background-color: #aa4c36;
+  background-image: url("../images/game-images/car.png");
 }
