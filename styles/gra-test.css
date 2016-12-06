@@ -1,0 +1,98 @@
+.app-game {
+  width: 680px;
+  height: 600px;
+  border: black solid 1px;
+  margin: 100px auto;
+  padding: 60px;
+  background-color: #bcc9e7;
+  text-align: center;
+}
+
+.main-menu {
+  width: 600px;
+  height: 480px;
+  background-color: lightpink;
+}
+
+.instructions {
+  width: 600px;
+  height: 480px;
+  background-color: lightpink;
+}
+
+.instructions p{
+  width:440px;
+  margin: 0 auto;
+}
+
+.game-over {
+  width: 600px;
+  height: 480px;
+  background-color: lightpink;
+}
+
+.hud {
+  width: 98px;
+  height: 480px;
+  border: black solid 3px;
+  float: left;
+  background-color: #2e6aa2;
+}
+
+.board {
+  width: 480px;
+  height: 480px;
+  border: black solid 3px;
+  float: left;
+  background-color: white;
+}
+
+.board__field {
+  width: 60px;
+  height: 60px;
+  /*border: black solid 1px;*/
+  float: left;
+}
+
+.road-stripe:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 40px;
+  position: relative;
+  top: 10px;
+  left: 52px;
+  background-color: white;
+}
+
+.board__field_road {
+  background-color: #4e5053;
+}
+
+.board__field_grass {
+  position: relative;
+  background-color: #3cb435;
+
+}
+
+.board__field_client {
+  position: relative;
+  background-color: #b48e4a;
+
+}
+
+.board__field_block {
+  position: relative;
+  background-color: #191409;
+}
+
+.board__field_red-dzik {
+  position: relative;
+  background-color: #2936be;
+}
+
+.player {
+  position: relative;
+  z-index: 20;
+  background-image: url("../images/game-images/car.png");
+}
