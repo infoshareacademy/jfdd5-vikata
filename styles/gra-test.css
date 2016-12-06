@@ -69,26 +69,35 @@
   background-color: #4e5053;
 }
 
-.board__field_grass {
+.board__field_grass-l {
   position: relative;
-  background-color: #3cb435;
+  background-image: url("../images/game-images/trawka_L.png");
+}
 
+.board__field_grass-p {
+  position: relative;
+  background-image: url("../images/game-images/trawka_P.png");
+}
+
+.board__field_tree-l-1 {
+  position: relative;
+  background-image: url("../images/game-images/drzewko_L_1.png");
 }
 
 .board__field_client {
   position: relative;
-  background-color: #b48e4a;
+  background-image: url("../images/game-images/janusz.png");
 
 }
 
 .board__field_block {
   position: relative;
-  background-color: #191409;
+  background-image: url("../images/game-images/dziura_1.png");
 }
 
 .board__field_red-dzik {
   position: relative;
-  background-color: #2936be;
+  background-image: url("../images/game-images/red_dzik.png");
 }
 
 .player {
