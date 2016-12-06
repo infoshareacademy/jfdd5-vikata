@@ -7,7 +7,7 @@ $(window).scroll(function(){
   var position = $(this).scrollTop();
 
     $('section').each(function () {
-      var target = $(this).offset().top;
+      var target = $(this).offset().top - 500;
       var id = $(this).attr('id');
 
 
