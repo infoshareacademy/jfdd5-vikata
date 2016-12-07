@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>slider3</title>
+  <style>
+    div {
+      width:200px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<div class="feature" style="background-color: yellow"></div>
+<div class="feature" style="background-color: green"></div>
+<div class="feature" style="background-color: blue"></div>
+<div class="feature" style="background-color: red"></div>
+
+<a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+<a class="w3-btn-floating w3-display-right" onclick="plusDivs(+1)">&#10095;</a>
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("feature");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+
+
+</script>
+</body>
+</html>
