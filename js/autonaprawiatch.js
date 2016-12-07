@@ -54,7 +54,11 @@ $(document).ready(function () {
         [1, 0, 0, 0, 0, 0, 0, 12],
         [1, 0, 0, 0, 0, 0, 0, 12],
         [1, 0, 0, 0, 0, 0, 0, 12]
-    ];
+    ].map(function (row) {
+        return row.map(function (cell) {
+            return cell === 3 ? [31, 32, 33][Math.floor(Math.random() * 3)] : cell;
+        });
+    });
 
     var speedChange = false;
     var yPosition = board.length - 8;
@@ -158,18 +162,27 @@ $(document).ready(function () {
                             return 'board__field board__field_client';
                         }
 
-                        if (board[i][j] === 3) {
-                            return 'board__field board__field_block';
+                        if (board[i][j] === 31) {
+                            return 'board__field board__field_block-1';
+                        }
+
+                        if (board[i][j] === 32) {
+                            return 'board__field board__field_block-2';
+                        }
+
+                        if (board[i][j] === 33) {
+                            return 'board__field board__field_block-3';
                         }
 
                         if (board[i][j] === 4) {
                             return 'board__field board__field_red-dzik';
                         }
-                    }).css('background-image', function () {
-                        if(board[i][j] === 3){
-                            return 'url("images/game-images/dziura_'+Math.floor((Math.random() * 3) + 1)+'.png"';
-                        }
                     })
+                    // .css('background-image', function () {
+                    // if(board[i][j] === 3){
+                    //     return 'url("images/game-images/dziura_'+Math.floor((Math.random() * 3) + 1)+'.png"';
+                    // }
+                    // })
                 );
             }
         }
@@ -182,11 +195,16 @@ $(document).ready(function () {
     }
 
     function checkColision() {
-        if ($('#7' + x).hasClass("board__field_block")) {
+        var pos = $('#7' + x);
+        var hole1 = pos.hasClass("board__field_block-1");
+        var hole2 = pos.hasClass("board__field_block-2");
+        var hole3 = pos.hasClass("board__field_block-3");
+
+        if (hole1 || hole2 || hole3) {
             gameOver();
         }
 
-        if ($('#7' + x).hasClass("board__field_red-dzik")) {
+        if (pos.hasClass("board__field_red-dzik")) {
             elementReddzik();
         }
     }
