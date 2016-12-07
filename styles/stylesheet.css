@@ -350,7 +350,7 @@ h2 {
 /**********************************/
 
 #our-team {
-  background-color: #142e47;
+  background-color: whitesmoke;
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 100px;
@@ -436,7 +436,6 @@ h2 {
 
 .oval-4 {
   background: url("../images/alan_front.jpg");
-  background-position: 14px -40px;
   background-size: 95%;
   background-repeat: no-repeat;
   background-color: #C6C9CE;
@@ -445,7 +444,6 @@ h2 {
 }
 
 .zespol {
-  /*background-color: chartreuse;*/
   padding-left: 20px;
   padding-top: 20px;
   margin: auto;
@@ -494,4 +492,22 @@ h2 {
   width: 30px;
   height: 30px;
 
+}
+
+.zespol-opis{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*text-align: center;*/
+
+}
+
+.opis-developera {
+  display: flex;
+  flex-direction: column;
+}
+
+.linki {
+  display: flex;
+  justify-content: space-around;
 }
