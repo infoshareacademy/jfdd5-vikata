@@ -3,57 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Test gry</title>
-
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <link rel="stylesheet" href="styles/gra-test.css">
 </head>
 <body>
 <div class="app-game">
 
   <div class="main-menu">
-    <h1>Autonaprawiacz</h1>
-
+    <h1>Autonaprawiatch</h1>
     <h2>The Game</h2>
 
-    <p>v 0.2</p>
-    <button class="btn-goto-instructions">Nowa Gra</button>
+
+    <p>v 0.4</p>
+    <button class="btn btn-goto-instructions">Nowa Gra</button>
 
     <p>Twój najlepszy wynik:<span class="hud__top-score"></span></p>
 
-    <!--<button class="btn-high-scores">Ranking wyników</button>-->
   </div>
 
   <div class="instructions">
     <h3>Instrukcje do gry:</h3>
-    <p>Twoim zadaniem jest dostarczyć zamówione części do jak najwiekszej liczby klientów.
-      Cenimy ich czas dlatego ciężarówka nie ma hamulców. Każdy następny klient będzie bardziej zniecierpliwiony dlatego też po dostarczonej paczce - automatycznie przyśpiesza.
-      Twoim zadaniem jest skręcanie w lewo i prawo za pomocą strzałęk na klawiaturze tak by nic nie uszkodzić. Powodzenia!</p>
+    <p>Twoim zadaniem jest dostarczyc zamówione czesci do jak najwiekszej liczby klientów.
+      Cenimy ich czas dlatego ciezarówka nie ma hamulców. Kazdy nastepny klient bedzie bardziej zniecierpliwiony dlatego też po dostarczonej paczce - automatycznie przyśpiesza.
+      Manewrój w lewo i prawo za pomoca strzałek na klawiaturze tak by nie wjechac w dziury na drodze - czecsi sa dla klientów. Powodzenia!</p>
 
-    <button class="btn-goto-newgame">Graj</button>
+    <button class="btn btn-goto-newgame">Graj</button>
   </div>
 
   <div class="gameplay">
       <div class="hud">
-        <!--<h3>Czas:</h3>-->
-        <!--<p class="hud__time"></p>-->
-        <!--<h3>Prędkość:</h3>-->
-        <!--<p class="hud__speed"></p>-->
-        <h3>Zadowoleni klienci:</h3>
+        <p>Zadowoleni klienci:</p>
+
         <p class="hud__clients"></p>
-        <button class="btn-goto-mainmenu">MENU</button>
+
+        <button class="btn btn-goto-mainmenu">MENU</button>
        </div>
     <div class="board"></div>
   </div>
 
   <div class="game-over">
-    <h2>Rozbiłeś ciężarówkę!</h2>
-    <p>Twój wynik: <span class="hud__clients"></span> klientów do których dostarczyłeś części.</p>
-    <p>Nasi dostawcy zrobią to lepiej ;)</p>
-    <button class="btn-goto-newgame">Zagraj jeszcze raz</button>
-    <button class="btn-goto-mainmenu">Wróć do menu</button>
+    <h2>Rozbiles ciezarówke!</h2>
+    <p>Twój wynik: <span class="hud__clients"></span> klientów do których dostarczyles czesci.</p>
+    <p>Nasi dostawcy zrobia to lepiej ;)</p>
+    <button class="btn btn-goto-newgame">Chce jeszcze!</button>
+    <button class="btn btn-goto-mainmenu">Nie dam rady..</button>
   </div>
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/grid.js"></script>
+<script src="js/autonaprawiatch.js"></script>
 </body>
 </html>
