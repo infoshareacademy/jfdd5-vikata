@@ -330,9 +330,9 @@ h2 {
   border: solid black
 }
 
-.feature:nth-of-type(2n) {
-  margin-left: 35%;
-}
+/*.feature:nth-of-type(2n) {*/
+  /*margin-left: 35%;*/
+/*}*/
 
 .feature i {
   display: block;
