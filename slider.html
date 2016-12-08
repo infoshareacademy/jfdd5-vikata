@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>slider</title>
+  <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+
+
+</head>
+<body>
+<section id="features" class="cf">
+  <h2>Nasza aplikacja to:</h2>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <div class="feature">
+      <i class="fa fa-search" aria-hidden="true"></i>
+
+      <h3>SZCZEGÓŁOWA WYSZUKIWARKA</h3>
+      <div class="feature-text">
+        <p>Wyszukiwarka na naszej stronie umożliwia szybkie i sprawne przeszukiwanie ofert. Dzięki zaawansowanym opcjom
+          znajdziesz dokładnie to czego potrzebujesz.
+        </p>
+      </div>
+    </div>    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <div class="feature">
+      <i class="fa fa-wrench" aria-hidden="true"></i>
+
+      <h3>NAJWIĘKSZA BAZA CZĘŚCI</h3>
+
+      <div class="feature-text">
+        <p>Baza częsci, które oferujemy obejmuje dostawców Polski oraz za granicy. Znajdziesz u nas ponad 5mln
+          częsci w różnych cenach.
+        </p>
+      </div>
+    </div>
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <div class="feature">
+      <i class="fa fa-percent" aria-hidden="true"></i>
+
+      <h3>ZERO PROWIZJI</h3>
+
+      <div class="feature-text">
+        <p>Nie pobieramy żadnej prowizji, kupując u nas kupujesz bez ukrytych kosztów. Możesz być też pewnien,
+          że każdą cześć możesz zwrócic bezpłatnie w ciągu 14dni.
+        </p>
+      </div>
+    </div>
+    <div class="text">Caption Three</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <div class="feature">
+      <i class="fa fa-percent" aria-hidden="true"></i>
+
+      <h3>TYLKO ZAUFANI DOSTAWCY</h3>
+
+      <div class="feature-text">
+        <p>Nasi dostawcy to sprawdzone firmy z długoletnim stażem na rynku. Z naszymi dostawcami mamy dobry
+          kontakt i zapewniamy, że i Państwo bedziecie zadowoleni.
+        </p>
+      </div>
+    </div>
+    <div class="text">Caption Three</div>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+</section>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+</body>
+</html>
