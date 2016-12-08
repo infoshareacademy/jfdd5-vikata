@@ -376,12 +376,18 @@ h2 {
   background-color: whitesmoke;
   background-repeat: no-repeat;
   background-size: 100%;
-  padding: 100px;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 50px;
+}
 
+#our-team h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 5em;
 }
 
 .zespol-opis {
-  display: inline-block;
+  display: inline-flex;
   margin: 10px;
 }
 
@@ -475,6 +481,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .podOwalem1{
@@ -518,6 +525,7 @@ h2 {
 }
 
 .zespol-opis{
+  width: 230px;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
@@ -526,8 +534,12 @@ h2 {
 }
 
 .opis-developera {
+  width: 230px;
+  height: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .linki {
