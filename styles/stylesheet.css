@@ -423,14 +423,13 @@ h2 {
 /*new code for rotation*/
 
 .rotate {
-  transition: 1.2s;
+  transition: 1.2s ease 0s;
   transform-style: preserve-3d;
   position: relative;
   width: inherit;
 }
 
-.rotate:hover,
-.force-show {
+.rotate:hover, .force-show {
   transform: rotateY(180deg);
 }
 
