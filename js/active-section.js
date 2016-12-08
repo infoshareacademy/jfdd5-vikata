@@ -6,23 +6,15 @@
 $(window).scroll(function(){
   var position = $(this).scrollTop();
 
-    $('section').each(function () {
+     $('section').each(function () {
       var target = $(this).offset().top - 500;
       var id = $(this).attr('id');
 
-
-
      if (position >= target) {
-       // console.log('podswietlam ID', id)
         $('ul.nav li').removeClass('active-element');
         $('ul.nav li > a[href="#' + id + '"]').parent().addClass('active-element');
-
-
       }
-
     }
   )
-
-
 }
 )
