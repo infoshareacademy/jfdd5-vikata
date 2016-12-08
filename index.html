@@ -282,7 +282,13 @@
 <script src="js/our-team-rotation.js"> </script>
 <script src="js/slider.js"> </script>
 <script src="js/featureslider.js"> </script>
-
+<script>
+    $(".app-game").hide();
+    $('.zapis-form').submit(function (event) {
+        event.preventDefault();
+        $(".app-game").show();
+    })
+</script>
 </body>
 </html>
 

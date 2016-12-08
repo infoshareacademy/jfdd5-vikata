@@ -1,29 +1,40 @@
 .app-game {
-  width: 680px;
-  height: 600px;
+  width: 600px;
+  height: 480px;
   border: black solid 1px;
   margin: 100px auto;
-  padding: 60px;
   background-color: #bcc9e7;
   text-align: center;
   font-family: 'VT323', monospace;
   font-size: 16px;
   cursor: url("../images/game-images/cursor.cur"), default;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
-h1 {
+.app-game div{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.app-game h1 {
   font-size: 4.5em;
 }
 
-h2 {
+.app-game h2 {
   font-size: 3.5em;
+  margin: 0;
+  word-spacing: normal;
+  text-shadow: none;
 }
 
-h3 {
+.app-game h3 {
   font-size: 2em;
 }
 
-p {
+.app-game p {
   font-size: 1.5em;
 }
 
@@ -68,7 +79,7 @@ p {
 }
 
 .hud {
-  width: 98px;
+  width: 108px;
   height: 480px;
   border: black solid 3px;
   float: left;
