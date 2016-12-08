@@ -32,7 +32,7 @@ h2 {
   color: white;
 }
 .container {
-    max-width: 2048px;
+    max-width: 1600px;
     width:100%;
     margin-left: auto;
     margin-right: auto;
@@ -54,11 +54,11 @@ h2 {
   transform: scale(1.2, 1.2);
 }
 .collapse, .navbar-collapse {
-  background-color: rgba(25, 59, 91, 0.9);
+  background-color: rgba(25, 59, 91, 0.5);
   padding-top: 10px;
 }
 .navbar, .navbar-default, .navbar-fixed-top {
-  background-color: transparent;
+  background: transparent;
 }
 .navbar-default .navbar-nav>li>a {
   color: #ddd;
@@ -116,7 +116,7 @@ h2 {
   background-position: center top;
   background-repeat: no-repeat;
   height: 900px;
-  max-width: 1200px;
+  max-width: 1600px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -384,6 +384,7 @@ h2 {
   text-align: center;
   padding-top: 50px;
   font-size: 5em;
+  color: black;
 }
 
 .zespol-opis {
