@@ -1,4 +1,12 @@
 /*KOLORY STRONY*/
+
+.active-element {
+  background: rgba(201, 216, 239, 0.6);
+  border-radius: 95%;
+
+}
+
+
 .color1 {
   color: rgb(18, 43, 114);
 }

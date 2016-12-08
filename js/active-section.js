@@ -14,8 +14,8 @@ $(window).scroll(function(){
 
      if (position >= target) {
        // console.log('podswietlam ID', id)
-        $('ul.nav li').removeClass('active');
-        $('ul.nav li > a[href="#' + id + '"]').parent().addClass('active');
+        $('ul.nav li').removeClass('active-element');
+        $('ul.nav li > a[href="#' + id + '"]').parent().addClass('active-element');
 
 
       }
