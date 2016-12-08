@@ -169,7 +169,7 @@ h2 {
   display: block;
   background-color: #1f476c;
   width: 400px;
-  height: 60px;
+  height: 80px;
   margin: -50px 50% 0;
   left: -200px;
   padding-top: 20px;
@@ -218,18 +218,40 @@ h2 {
   border-right: 0;
 }
 
+.arrows {
+  position: relative;
+}
+.arrows a{
+  font-size: 40px;
+  color: lightgrey;
+}
+.arrows a:focus {
+  text-decoration: none;
+}
+.arrows a:hover {
+  text-decoration: none;
+}
+.arrow-left{
+  position: absolute;
+  left: 25%;
+
+}
+.arrow-right{
+  position: absolute;
+  right: 25%;
+}
 /******************************************/
 /*                 FICZERY                */
 /******************************************/
 #features {
-  height: 1600px;
+  height: 600px;
   font-size: 1rem;
   text-align: center;
-  padding-top: 120px;
-  background-image: url("../images/droga.jpg");
-  background-size: auto 100%;
-  background-position: center;
-  color: white;
+  padding-top: 100px;
+  /*background-image: url("../images/droga.jpg");*/
+  /*background-size: auto 100%;*/
+  /*background-position: center;*/
+  color: #110000;
 }
 
 .feature {
@@ -238,14 +260,14 @@ h2 {
   border: white solid 1px;
   border-radius: 130px;
   margin-top: 100px;
-  margin-left: 45%;
-  background-color: transparent;
-  transition: width 1s, background-color 1s;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+  transition-property: width, background-color;
+  transition-duration: 1s;
+  border: solid black
 }
 
-.feature:nth-of-type(2n) {
-  margin-left: 35%;
-}
 
 .feature i {
   display: block;
@@ -272,7 +294,8 @@ h2 {
   width: 700px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 200px;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-text {
