@@ -8,6 +8,8 @@
   <!--<link rel="stylesheet" href="bootstrap/bootstrap.min.css">-->
   <link rel="stylesheet" type="text/css" href="styles/clearfix.css">
   <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="styles/autonaprawiatch.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -147,6 +149,50 @@
       <p>Na ten adres zostanie wysłany tylko jeden e-mail z informacją o premierze. Twoje dane są bezpieczne.</p>
     </div>
 
+    <div class="app-game">
+
+      <div class="main-menu">
+        <h1>Autonaprawiatch</h1>
+        <h2>The Game</h2>
+
+
+        <p>v 0.4</p>
+        <button class="btn btn-goto-instructions">Nowa Gra</button>
+
+        <p>Twój najlepszy wynik:<span class="hud__top-score"></span></p>
+
+      </div>
+
+      <div class="instructions">
+        <h3>Instrukcje do gry:</h3>
+        <p>Twoim zadaniem jest dostarczyc zamówione czesci do jak najwiekszej liczby klientów.
+          Cenimy ich czas dlatego ciezarówka nie ma hamulców. Kazdy nastepny klient bedzie bardziej zniecierpliwiony dlatego też po dostarczonej paczce - automatycznie przyśpiesza.
+          Manewrój w lewo i prawo za pomoca strzałek na klawiaturze tak by nie wjechac w dziury na drodze - czecsi sa dla klientów. Powodzenia!</p>
+
+        <button class="btn btn-goto-newgame">Graj</button>
+      </div>
+
+      <div class="gameplay">
+        <div class="hud">
+          <p>Zadowoleni klienci:</p>
+
+          <p class="hud__clients"></p>
+
+          <button class="btn btn-goto-mainmenu">MENU</button>
+        </div>
+        <div class="board"></div>
+      </div>
+
+      <div class="game-over">
+        <h2>Rozbiles ciezarówke!</h2>
+        <p>Twój wynik: <span class="hud__clients"></span> klientów do których dostarczyles czesci.</p>
+        <p>Nasi dostawcy zrobia to lepiej ;)</p>
+        <button class="btn btn-goto-newgame">Chce jeszcze!</button>
+        <button class="btn btn-goto-mainmenu">Nie dam rady..</button>
+      </div>
+
+    </div>
+
   </section>
 
   <section id="our-team">
@@ -232,6 +278,7 @@
 <script src="bootstrap-3.3.7/jquery.min.js" ></script>
 <script src="bootstrap-3.3.7/js/bootstrap.min.js" ></script>
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script src="js/autonaprawiatch.js"></script>
 <script src="js/our-team-rotation.js"> </script>
 <script src="js/slider.js"> </script>
 <script src="js/featureslider.js"> </script>
