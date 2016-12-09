@@ -178,11 +178,6 @@ $(document).ready(function () {
                             return 'board__field board__field_red-dzik';
                         }
                     })
-                    // .css('background-image', function () {
-                    // if(board[i][j] === 3){
-                    //     return 'url("images/game-images/dziura_'+Math.floor((Math.random() * 3) + 1)+'.png"';
-                    // }
-                    // })
                 );
             }
         }
@@ -271,4 +266,5 @@ $(document).ready(function () {
     });
 
     menu(0);
+
 });
