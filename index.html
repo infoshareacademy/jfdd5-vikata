@@ -138,10 +138,20 @@
     <h2>Zainteresowany? Zapisz się na premierę!</h2>
 
     <div class="zapis-form">
-      <form>
-        <input type="email" placeholder=" e-mail">
+      <!--<form>-->
+        <!--<input type="email" placeholder=" e-mail">-->
 
-        <input type="submit" value="ZAPISZ MNIE">
+        <!--<input type="submit" value="ZAPISZ MNIE">-->
+      <!--</form>-->
+
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-block btn-default">Submit</button>
       </form>
 
       <p>Na ten adres zostanie wysłany tylko jeden e-mail z informacją o premierze. Twoje dane są bezpieczne.</p>
@@ -155,7 +165,7 @@
 
 
         <p>v 0.4</p>
-        <button class="btn btn-goto-instructions">Nowa Gra</button>
+        <button class="game-btn btn-goto-instructions">Nowa Gra</button>
 
         <p>Twój najlepszy wynik:<span class="hud__top-score"></span></p>
 
@@ -167,7 +177,7 @@
           Cenimy ich czas dlatego ciezarówka nie ma hamulców. Kazdy nastepny klient bedzie bardziej zniecierpliwiony dlatego też po dostarczonej paczce - automatycznie przyśpiesza.
           Manewrój w lewo i prawo za pomoca strzałek na klawiaturze tak by nie wjechac w dziury na drodze - czecsi sa dla klientów. Powodzenia!</p>
 
-        <button class="btn btn-goto-newgame">Graj</button>
+        <button class="game-btn btn-goto-newgame">Graj</button>
       </div>
 
       <div class="gameplay">
@@ -176,7 +186,7 @@
 
           <p class="hud__clients"></p>
 
-          <button class="btn btn-goto-mainmenu">MENU</button>
+          <button class="game-btn btn-goto-mainmenu">MENU</button>
         </div>
         <div class="board"></div>
       </div>
@@ -185,8 +195,8 @@
         <h2>Rozbiles ciezarówke!</h2>
         <p>Twój wynik: <span class="hud__clients"></span> klientów do których dostarczyles czesci.</p>
         <p>Nasi dostawcy zrobia to lepiej ;)</p>
-        <button class="btn btn-goto-newgame">Chce jeszcze!</button>
-        <button class="btn btn-goto-mainmenu">Nie dam rady..</button>
+        <button class="game-btn btn-goto-newgame">Chce jeszcze!</button>
+        <button class="game-btn btn-goto-mainmenu">Nie dam rady..</button>
       </div>
 
     </div>
@@ -287,6 +297,8 @@
     $('.zapis-form').submit(function (event) {
         event.preventDefault();
         $(".app-game").show();
+        $(".zapis-form").hide();
+
     })
 </script>
 </body>

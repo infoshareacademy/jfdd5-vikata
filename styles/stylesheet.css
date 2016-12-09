@@ -355,7 +355,7 @@ body {
 /****************************************/
 
 #zapis-na-premiere {
-  background-image: url("../images/start_line2.jpg");
+  background-image: url("../images/bg.jpg");
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
@@ -370,42 +370,51 @@ body {
 }
 
 .zapis-form {
-  width: 630px;
+  width: 600px;
   padding: 60px;
   height: 355px;
   margin: 100px auto 0;
   /*border: black solid 3px;*/
-  background-image: url("../images/koperta.png");
+  background-color: #0196CC;
+  /*background-image: url("../images/koperta.png");*/
   background-repeat: no-repeat;
+  color: white;
+  box-shadow: 2px 2px 2px #000000;
 }
 
-.zapis-form input[type="email"] {
-  width: 500px;
-  height: 52px;
-  font-size: 42px;
-}
+/*.zapis-form input[type="email"] {*/
+  /*width: 500px;*/
+  /*height: 52px;*/
+  /*font-size: 42px;*/
+  /*background: white;*/
+  /*color: black;*/
+  /*border: 0;*/
+/*}*/
 
-.zapis-form input[type="submit"] {
-  width: 200px;
-  height: 50px;
-  font-size: 1.5em;
-  border: black solid 0px;
-  background-color: whitesmoke;
-  margin: 20px;
-  cursor: pointer;
-}
+/*.zapis-form input[type="submit"] {*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*padding: 20px 0;*/
+  /*height: 50px;*/
+  /*font-size: 1.5em;*/
+  /*border: white solid 0px;*/
+  /*background-color: #0196CC;*/
+  /*cursor: pointer;*/
+  /*border: black solid 1px;*/
+  /*border-radius: 5px;*/
+/*}*/
 
-.zapis-form input[type="submit"]:hover {
-  background-color: #bfbfbf;
-}
+/*.zapis-form input[type="submit"]:hover {*/
+  /*background-color: #00659A;*/
+/*}*/
 
 .zapis-form p {
   width: 480px;
   padding: 10px;
-  border: #31592e 2px solid;
+  /*border: #31592e 2px solid;*/
   border-radius: 10px;
   margin: 30px auto;
-  background-color: whitesmoke;
+  background-color: #00659A;
 }
 
 /**********************************/
