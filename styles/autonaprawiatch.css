@@ -2,7 +2,7 @@
   width: 600px;
   height: 480px;
   border: black solid 1px;
-  margin: 100px auto;
+  /*margin: 100px auto;*/
   background-color: #bcc9e7;
   text-align: center;
   font-family: 'VT323', monospace;
@@ -11,6 +11,8 @@
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .app-game div{
@@ -38,7 +40,7 @@
   font-size: 1.5em;
 }
 
-.btn {
+.game-btn {
   width: 90px;
   height: 50px;
   border: 4px solid #1a3e5e;
@@ -47,7 +49,7 @@
   font-size: 20px;
 }
 
-.btn:hover {
+.game-btn:hover {
   background-color: #214d76;
   cursor: inherit;
 }
