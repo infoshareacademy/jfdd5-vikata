@@ -1,10 +1,6 @@
 /*KOLORY STRONY*/
 
-.active-element {
-  background: rgba(201, 216, 239, 0.6);
-  border-radius: 95%;
 
-}
 
 
 .color1 {
@@ -44,8 +40,12 @@ h2 {
     width:100%;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
+.navbar .navbar-default .navbar-fixed-top {
+  max-width: 1600px;
+
+}
 /**********************************/
 /*               MENU             */
 /**********************************/
@@ -62,7 +62,7 @@ h2 {
   transform: scale(1.2, 1.2);
 }
 .collapse, .navbar-collapse {
-  background-color: rgba(25, 59, 91, 0.5);
+  background-color: rgba(25, 59, 91, 0.8);
   padding-top: 10px;
 }
 .navbar, .navbar-default, .navbar-fixed-top {
@@ -72,13 +72,20 @@ h2 {
   color: #ddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #ddd;
+  background-color: black;
 }
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:hover, .active-element {
   color: white;
-  background-color: rgba(26, 57, 112, 0.6);
   font-size: 110%;
+  text-shadow: 1px 1px black;
+  background-color: rgba(42, 97, 148, 0.9);
+  border-radius: 5px;
+  color: white;
+  border-bottom: 1px solid rgb(120, 162, 186);
+
 }
+
+
 #bs-example-navbar-collapse-1 {
   padding-right: 20px;
 }
@@ -420,14 +427,13 @@ h2 {
 /*new code for rotation*/
 
 .rotate {
-  transition: 1.2s;
+  transition: 1.2s ease 0s;
   transform-style: preserve-3d;
   position: relative;
   width: inherit;
 }
 
-.rotate:hover,
-.force-show {
+.rotate:hover, .force-show {
   transform: rotateY(180deg);
 }
 
