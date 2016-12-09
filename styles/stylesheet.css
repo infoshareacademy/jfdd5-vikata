@@ -29,12 +29,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h2 {
-  font-size: 4em;
-  text-shadow: 0px 0px 8px black;
-  word-spacing: 8px;
-  color: white;
-}
 .container {
     max-width: 1600px;
     width:100%;
@@ -45,6 +39,12 @@ h2 {
 .navbar .navbar-default .navbar-fixed-top {
   max-width: 1600px;
 
+}
+
+@media screen and (max-width: 1000px){
+  #features.cf{
+    background: none;
+  }
 }
 /**********************************/
 /*               MENU             */
@@ -118,11 +118,16 @@ h2 {
   font-size: 8vw;
   padding-bottom: 25px;
   line-height: 5vw;
+  color: white;
 }
 
 .opiszajawka h2 {
   font-size: 4vw;
   line-height: 8vw;
+  font-size: 4em;
+  text-shadow: 0px 0px 8px black;
+  word-spacing: 8px;
+  color: white;
 }
 
 #home {
@@ -187,7 +192,7 @@ h2 {
   height: 80px;
   margin: -50px 50% 0;
   left: -200px;
-  padding-top: 20px;
+  padding-top: 10px;
   z-index: 200;
   border: #142e47 solid 8px;
   border-right: 0;
@@ -239,33 +244,41 @@ h2 {
 .arrows a{
   font-size: 40px;
   color: lightgrey;
+  top:-150px;
 }
 .arrows a:focus {
   text-decoration: none;
 }
 .arrows a:hover {
   text-decoration: none;
+  cursor: pointer;
+
 }
 .arrow-left{
   position: absolute;
-  left: 25%;
+  left: 360px;
 
 }
 .arrow-right{
   position: absolute;
-  right: 25%;
+  right: 360px;
 }
 /******************************************/
 /*                 FICZERY                */
 /******************************************/
 #features {
-  height: 600px;
+  height: 1000px;
   font-size: 1rem;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 200px;
+
   /*background-image: url("../images/droga.jpg");*/
   /*background-size: auto 100%;*/
   /*background-position: center;*/
+  background: url("../images/tv.jpg");
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #110000;
 }
 
@@ -292,13 +305,18 @@ h2 {
   width: 260px;
 }
 
+#features h2{
+  font-size: 5em;
+}
+
 .feature h3 {
-  font-size: 1.5em;
+  font-size: 1.9em;
   width: 220px;
   text-align: center;
   margin-left: 20px;
   margin-top: 20px;
   float: left;
+  font-weight: 700;
 }
 
 .feature p {
@@ -346,17 +364,23 @@ h2 {
   padding-bottom: 200px;
 }
 
+#zapis-na-premiere h2{
+  font-size: 3em;
+  color: white;
+}
+
 .zapis-form {
-  width: 600px;
+  width: 630px;
   padding: 60px;
-  height: 200px;
+  height: 355px;
   margin: 100px auto 0;
-  border: black solid 3px;
-  background-color: #e3e3e3;
+  /*border: black solid 3px;*/
+  background-image: url("../images/koperta.png");
+  background-repeat: no-repeat;
 }
 
 .zapis-form input[type="email"] {
-  width: 600px;
+  width: 500px;
   height: 52px;
   font-size: 42px;
 }
@@ -365,14 +389,14 @@ h2 {
   width: 200px;
   height: 50px;
   font-size: 1.5em;
-  border: #1f486e solid 2px;
-  background-color: transparent;
-  margin: 10px;
+  border: black solid 0px;
+  background-color: whitesmoke;
+  margin: 20px;
   cursor: pointer;
 }
 
 .zapis-form input[type="submit"]:hover {
-  background-color: #3171ad;
+  background-color: #bfbfbf;
 }
 
 .zapis-form p {
@@ -380,7 +404,8 @@ h2 {
   padding: 10px;
   border: #31592e 2px solid;
   border-radius: 10px;
-  margin: 40px auto;
+  margin: 30px auto;
+  background-color: whitesmoke;
 }
 
 /**********************************/
@@ -398,8 +423,9 @@ h2 {
 #our-team h2 {
   text-align: center;
   padding-top: 50px;
-  font-size: 5em;
+  font-size: 3.4em;
   color: black;
+  margin:0;
 }
 
 .zespol-opis {
