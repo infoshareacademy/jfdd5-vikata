@@ -28,6 +28,7 @@ body {
 
 .container {
     max-width: 1600px;
+    min-width: 400px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -41,6 +42,12 @@ body {
 @media screen and (max-width: 1000px) {
     #features.cf {
         background: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #odn-do-formularza {
+        display: none;
     }
 }
 
@@ -123,15 +130,15 @@ body {
 
 .opiszajawka h1 {
     font-size: 8vw;
+    letter-spacing: 10px;
     padding-bottom: 25px;
     line-height: 5vw;
     color: white;
 }
 
 .opiszajawka h2 {
-    font-size: 4vw;
+    font-size: 6vw;
     line-height: 8vw;
-    font-size: 4em;
     text-shadow: 0px 0px 8px black;
     word-spacing: 8px;
     color: white;
@@ -365,7 +372,6 @@ body {
 
 #zapis-na-premiere {
     background: url("../images/bg.jpg");
-    background: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
@@ -381,7 +387,7 @@ body {
 }
 
 .zapis-form {
-    width: 600px;
+    max-width: 600px;
     padding: 60px;
     height: 355px;
     margin: 100px auto 0;
@@ -394,7 +400,7 @@ body {
 }
 
 .zapis-form p {
-    width: 480px;
+    max-width: 480px;
     padding: 10px;
     /*border: #31592e 2px solid;*/
     border-radius: 10px;
