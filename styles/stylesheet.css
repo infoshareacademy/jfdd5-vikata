@@ -148,7 +148,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
 /******************************************/
@@ -244,12 +243,13 @@ body {
 
 .arrows {
     position: relative;
+    width: 100%;
 }
 
 .arrows a {
     font-size: 40px;
     color: lightgrey;
-    top: -150px;
+    /*top: -150px;*/
 }
 
 .arrows a:focus {
@@ -264,13 +264,13 @@ body {
 
 .arrow-left {
     position: absolute;
-    left: 360px;
+    left: 30%;
 
 }
 
 .arrow-right {
     position: absolute;
-    right: 360px;
+    right: 30%;
 }
 
 /******************************************/
