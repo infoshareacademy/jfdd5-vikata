@@ -240,6 +240,9 @@ body {
 
 .arrows {
   position: relative;
+  max-width: 420px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .arrows a{
   font-size: 40px;
@@ -256,12 +259,12 @@ body {
 }
 .arrow-left{
   position: absolute;
-  left: 360px;
+  right: 570px;
 
 }
 .arrow-right{
   position: absolute;
-  right: 360px;
+  left: 570px;
 }
 /******************************************/
 /*                 FICZERY                */
