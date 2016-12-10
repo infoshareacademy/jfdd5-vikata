@@ -245,9 +245,9 @@ body {
   margin-left: auto;
 }
 .arrows a{
-  font-size: 40px;
+  font-size: 60px;
   color: lightgrey;
-  top:-150px;
+  top:-180px;
 }
 .arrows a:focus {
   text-decoration: none;
@@ -255,6 +255,7 @@ body {
 .arrows a:hover {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 
 }
 .arrow-left{
