@@ -6,7 +6,6 @@
 var playedRotation = false;
 
 $(window).scroll(function () {
-    console.log("scroll happened");
 
     if ($(document).scrollTop() > $("#our-team").offset().top -500 && !playedRotation) {
 
